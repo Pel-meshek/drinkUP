@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://7n8dmxmairre"]
+
+[sub_resource type="GDScript" id="GDScript_vsb4k"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://garage.tscn\")
+"
+
+[sub_resource type="GDScript" id="GDScript_lti8b"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_pressed() -> void:
+	get_tree().quit()
+"
+
+[node name="menu" type="Node2D" unique_id=439909804]
+
+[node name="Label" type="Label" parent="." unique_id=393824467]
+offset_left = 843.0
+offset_top = 265.0
+offset_right = 1251.0
+offset_bottom = 348.0
+theme_override_font_sizes/font_size = 60
+text = "БУХАЙ"
+
+[node name="enter" type="Button" parent="." unique_id=415783847]
+offset_left = 759.0
+offset_top = 443.0
+offset_right = 1121.0
+offset_bottom = 534.0
+theme_override_font_sizes/font_size = 60
+text = "БУХАТЬ"
+script = SubResource("GDScript_vsb4k")
+
+[node name="quit" type="Button" parent="." unique_id=324879813]
+offset_left = 759.0
+offset_top = 586.0
+offset_right = 1121.0
+offset_bottom = 677.0
+theme_override_font_sizes/font_size = 60
+text = "НЕ НЕ ХОЧУ"
+script = SubResource("GDScript_lti8b")
+
+[connection signal="pressed" from="enter" to="enter" method="_on_pressed"]
+[connection signal="pressed" from="quit" to="quit" method="_on_pressed"]
