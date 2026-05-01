@@ -13,7 +13,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if not stop:
-		type_text("Бухай блять мразь")
+		type_text("привет")
 	if Input.is_action_just_pressed("skip"):
 		queue_free()
 
