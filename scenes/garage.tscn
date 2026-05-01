@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://clq17cnbgy6b4" path="res://assets/Котел/Котел5.png" id="11_0785v"]
 [ext_resource type="AudioStream" uid="uid://s5oa13bo8iyj" path="res://Саунд/Нарезка овощей.mp3" id="11_w2145"]
 [ext_resource type="AudioStream" uid="uid://c2ld31difca5j" path="res://Саунд/Грустный саунд.mp3" id="12_4laxj"]
+[ext_resource type="Texture2D" uid="uid://ceifpkoiftcjh" path="res://assets/light_tele.png" id="19_q361v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_chw17"]
 texture = ExtResource("4_w2145")
@@ -69,17 +70,25 @@ sources/4 = SubResource("TileSetAtlasSource_oyih7")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4sak7"]
 texture = ExtResource("5_spycl")
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0.08992958, -8, 0.08992958, 8, -8, 8)
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
 4:0/0 = 0
 5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.26978683, 8, 0.08992958, -8, 8, -8, 8, 8)
 0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0.08992958, -8, 0.26978683, -0.5395775, 8, -0.35971832, 8, 8, -8, 8)
 1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.8992939, 8, -0.71943665, 8, 8, -8, 8)
 2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.8992939, 8, -0.71943665, 8, 8, -8, 8)
 3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.8992939, 8, -0.71943665, 8, 8, -8, 8)
 4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.8992939, 8, -0.71943665, 8, 8, -8, 8)
 5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.8992939, -0.26978874, -0.17985916, 0.08992958, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sdyjj"]
 texture = ExtResource("5_0785v")
@@ -102,19 +111,32 @@ texture = ExtResource("6_q361v")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lqxlc"]
 texture = ExtResource("7_m72hl")
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -8, 8, -8, 8, 8)
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -8, 8, -8, 8, 8)
 2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -8, 8, -8, 8, 8)
 3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -8, 8, -8, 8, 8)
 4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -8, 8, -8, 8, 8)
 5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -8, 8, -8, 8, 8)
 0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -8, 8, -8, 8, 8)
 1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -8, 8, -8, 8, 8)
 2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -8, 8, -8, 8, 8)
 3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -8, 8, -8, 8, 8)
 4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -8, 8, -8, 8, 8)
 5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -8, 8, -8, 8, 8)
 
 [sub_resource type="TileSet" id="TileSet_4y4st"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_4sak7")
 sources/1 = SubResource("TileSetAtlasSource_sdyjj")
 sources/2 = SubResource("TileSetAtlasSource_5080d")
@@ -226,6 +248,18 @@ stream = ExtResource("11_w2145")
 
 [node name="ГрустныйСаунд" type="AudioStreamPlayer" parent="." unique_id=801783800]
 stream = ExtResource("12_4laxj")
+volume_db = -31.57
+autoplay = true
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1113064694]
+energy = 0.3
+blend_mode = 1
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=2142955209]
+position = Vector2(398.00003, 61.999992)
+scale = Vector2(1.2031251, 1.4687496)
+shadow_enabled = true
+texture = ExtResource("19_q361v")
 
 [connection signal="body_entered" from="kotel/Area2D" to="kotel" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="kotel/Area2D" to="kotel" method="_on_area_2d_body_exited"]
