@@ -54,7 +54,7 @@ animations = [{
 script = ExtResource("1_8dubc")
 
 [node name="Score HUD" type="AnimatedSprite2D" parent="." unique_id=976957055]
-position = Vector2(1452, 1488)
+position = Vector2(965.00006, 939)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_7dvkv")
 animation = &"4"
