@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dcsbkd7qmuovv" path="res://assets/Man/МУЖИК ХОДИТ7.png" id="8_oprun"]
 [ext_resource type="Texture2D" uid="uid://cvctqokf48agk" path="res://assets/Man/МУЖИК ХОДИТ8.png" id="9_a8ls1"]
 [ext_resource type="AudioStream" uid="uid://bhfl73s42leof" path="res://Саунд/Хотьба по бетону.mp3" id="10_y4r1p"]
-[ext_resource type="PackedScene" path="res://scenes/ui.tscn" id="11_d2wvv"]
+[ext_resource type="PackedScene" uid="uid://dhucc0jp1i5vc" path="res://scenes/ui.tscn" id="11_d2wvv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y4r1p"]
 radius = 6.5

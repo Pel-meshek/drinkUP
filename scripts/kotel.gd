@@ -38,7 +38,8 @@ func start_timer():
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		is_active = true
+		if not is_timer_active:
+			is_active = true
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
