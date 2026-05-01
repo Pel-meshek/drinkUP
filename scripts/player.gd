@@ -4,6 +4,7 @@ extends CharacterBody2D
 const SPEED = 200.0
 @export var speed: float = 200.0
 @export var rotation_speed: float = 10.0 # Скорость поворота (чем выше, тем резче)
+var is_playing = false
 
 
 func _physics_process(delta: float) -> void:
@@ -23,5 +24,11 @@ func _physics_process(delta: float) -> void:
 		# Плавный поворот к цели (lerp_angle корректно обрабатывает переход через 180/-180 градусов)
 		rotation = lerp_angle(rotation, target_angle, rotation_speed * delta)
 	else:
+		if is_playing:
+			$AudioStreamPlayer2D.stop()
+			is_playing = false
 		$AnimatedSprite2D.play("idle")
 	move_and_slide()
+	if not is_playing:
+		$AudioStreamPlayer2D.play()
+		is_playing = true
