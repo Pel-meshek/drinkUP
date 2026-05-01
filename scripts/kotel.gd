@@ -3,6 +3,7 @@ extends StaticBody2D
 @onready var timer_label = $TimerLabel
 var is_active = false
 var is_timer_active = false
+var is_polnyi = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,6 +20,9 @@ func _input(event):
 		start_timer()
 
 func start_timer():
+	if not is_polnyi:
+		$AnimatedSprite2D.play("default")
+		is_polnyi = true
 	$AudioStreamPlayer2D.play()
 	is_timer_active = true
 	is_active = false
@@ -35,6 +39,7 @@ func start_timer():
 	is_active = true
 	is_timer_active = false
 	$AudioStreamPlayer2D.stop()
+	$AnimatedSprite2D.play("пустой")
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
