@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://k85ld780p7cg"]
+
+[ext_resource type="Texture2D" uid="uid://ct6xkgtnabko" path="res://assets/squirell/БЕЛКА1.png" id="1_mbnig"]
+[ext_resource type="Texture2D" uid="uid://cbex1xb4tv806" path="res://assets/squirell/БЕЛКА2.png" id="2_q8sv4"]
+[ext_resource type="Texture2D" uid="uid://cqcc3pbcnqgf1" path="res://assets/squirell/БЕЛКА3.png" id="3_moi3d"]
+[ext_resource type="Texture2D" uid="uid://86a1f613qbf7" path="res://assets/squirell/БЕЛКА4.png" id="4_di077"]
+[ext_resource type="Texture2D" uid="uid://c0pbh8dwk375q" path="res://assets/squirell/БЕЛКА5.png" id="5_rl4bs"]
+[ext_resource type="Texture2D" uid="uid://bgdcn13hybksd" path="res://assets/squirell/БЕЛКА6.png" id="6_bq385"]
+[ext_resource type="Texture2D" uid="uid://n0vb5vy8knpt" path="res://assets/squirell/БЕЛКА7.png" id="7_764fj"]
+[ext_resource type="Texture2D" uid="uid://cqmb6bj6lutsw" path="res://assets/squirell/БЕЛКА8.png" id="8_0mwxa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3d2y3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mbnig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_q8sv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_moi3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_di077")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rl4bs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bq385")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_764fj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0mwxa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_820lk"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=2000938191]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1358325544]
+sprite_frames = SubResource("SpriteFrames_3d2y3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1611558954]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_820lk")

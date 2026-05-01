@@ -21,6 +21,8 @@
 [ext_resource type="AudioStream" uid="uid://c2ld31difca5j" path="res://Саунд/Грустный саунд.mp3" id="12_4laxj"]
 [ext_resource type="Texture2D" uid="uid://bvcu31fhaeueo" path="res://assets/Котел/КОТЕЛ НИ С ЧЕМ.png" id="16_4sak7"]
 [ext_resource type="Texture2D" uid="uid://ceifpkoiftcjh" path="res://assets/light_tele.png" id="19_q361v"]
+[ext_resource type="PackedScene" uid="uid://dacv2754hedak" path="res://scenes/dialogue.tscn" id="22_sdyjj"]
+[ext_resource type="PackedScene" uid="uid://k85ld780p7cg" path="res://scenes/belka.tscn" id="23_5080d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_chw17"]
 texture = ExtResource("4_w2145")
@@ -277,6 +279,11 @@ position = Vector2(398.00003, 61.999992)
 scale = Vector2(1.2031251, 1.4687496)
 shadow_enabled = true
 texture = ExtResource("19_q361v")
+
+[node name="Dialogue" parent="." unique_id=198509155 instance=ExtResource("22_sdyjj")]
+
+[node name="CharacterBody2D" parent="." unique_id=2000938191 instance=ExtResource("23_5080d")]
+position = Vector2(377, 143)
 
 [connection signal="body_entered" from="kotel/Area2D" to="kotel" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="kotel/Area2D" to="kotel" method="_on_area_2d_body_exited"]

@@ -13,7 +13,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if not stop:
-		type_text("Бухай")
+		type_text("Бухай блять мразь")
+	if Input.is_action_just_pressed("skip"):
+		queue_free()
 
 # Эффект печатной машинки
 func type_text(new_text: String):
