@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bl0vytsapcd7b"
+path="res://.godot/imported/Звук ужаса.mp3-c449f12fc72c9b0c2eef3a8fa2e3f3ff.mp3str"
+
+[deps]
+
+source_file="res://Саунд/Звук ужаса.mp3"
+dest_files=["res://.godot/imported/Звук ужаса.mp3-c449f12fc72c9b0c2eef3a8fa2e3f3ff.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

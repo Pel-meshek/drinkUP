@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bhfl73s42leof"
+path="res://.godot/imported/Хотьба по бетону.mp3-b375d2176f68480c2c349a13e0307d1a.mp3str"
+
+[deps]
+
+source_file="res://Саунд/Хотьба по бетону.mp3"
+dest_files=["res://.godot/imported/Хотьба по бетону.mp3-b375d2176f68480c2c349a13e0307d1a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

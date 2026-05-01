@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://s5oa13bo8iyj"
+path="res://.godot/imported/Нарезка овощей.mp3-20e6a0b2310f9aa5b5753a0a364070f0.mp3str"
+
+[deps]
+
+source_file="res://Саунд/Нарезка овощей.mp3"
+dest_files=["res://.godot/imported/Нарезка овощей.mp3-20e6a0b2310f9aa5b5753a0a364070f0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

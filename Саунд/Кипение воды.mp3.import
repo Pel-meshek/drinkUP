@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ca0fxrgo7b8ok"
+path="res://.godot/imported/Кипение воды.mp3-6ca3e8f6ce5fe012b95b5da204f4c437.mp3str"
+
+[deps]
+
+source_file="res://Саунд/Кипение воды.mp3"
+dest_files=["res://.godot/imported/Кипение воды.mp3-6ca3e8f6ce5fe012b95b5da204f4c437.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
