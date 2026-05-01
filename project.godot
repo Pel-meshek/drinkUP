@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="drinkUP"
-run/main_scene="uid://dacv2754hedak"
+run/main_scene="uid://4klhqsnlfeu1"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://assets/icon.svg"
 

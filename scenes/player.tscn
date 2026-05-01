@@ -1,19 +1,55 @@
 [gd_scene format=3 uid="uid://doxryp0ogtpip"]
 
 [ext_resource type="Script" uid="uid://dhy3x2a2punqg" path="res://scripts/player.gd" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://bu6e2wpgxd36t" path="res://assets/icon.svg" id="2_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://brwx4n2l18iwu" path="res://assets/Man/МУЖИК ХОДИТ1.png" id="2_ur7pv"]
+[ext_resource type="Texture2D" uid="uid://bcr7nwj7gcq3a" path="res://assets/Man/МУЖИК ХОДИТ2.png" id="3_y4r1p"]
+[ext_resource type="Texture2D" uid="uid://mpfu7gku8eu2" path="res://assets/Man/МУЖИК ХОДИТ3.png" id="4_d2wvv"]
+[ext_resource type="Texture2D" uid="uid://b5xmskyxt50c2" path="res://assets/Man/МУЖИК ХОДИТ4.png" id="5_3v2ag"]
+[ext_resource type="Texture2D" uid="uid://wefl8xdcwmtj" path="res://assets/Man/МУЖИК ХОДИТ5.png" id="6_jej6c"]
+[ext_resource type="Texture2D" uid="uid://dfx7w13rlsgls" path="res://assets/Man/МУЖИК ХОДИТ6.png" id="7_f1ej7"]
+[ext_resource type="Texture2D" uid="uid://dcsbkd7qmuovv" path="res://assets/Man/МУЖИК ХОДИТ7.png" id="8_oprun"]
+[ext_resource type="Texture2D" uid="uid://cvctqokf48agk" path="res://assets/Man/МУЖИК ХОДИТ8.png" id="9_a8ls1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
-size = Vector2(42, 42)
+size = Vector2(42, 28)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sweqy"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_i3pqv")
+"texture": ExtResource("2_ur7pv")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ur7pv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_y4r1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_d2wvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3v2ag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jej6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_f1ej7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_oprun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_a8ls1")
+}],
+"loop": true,
+"name": &"walk",
 "speed": 5.0
 }]
 
@@ -21,12 +57,15 @@ animations = [{
 script = ExtResource("1_onrkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1360112998]
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_hqtel")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1758560911]
-position = Vector2(-1.9073486e-06, 1.9073486e-06)
-scale = Vector2(0.3203125, 0.3203125)
+position = Vector2(4.7683716e-07, -3.0000005)
+scale = Vector2(1.6582031, 1.6582031)
 sprite_frames = SubResource("SpriteFrames_sweqy")
+animation = &"idle"
+autoplay = "idle"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=655207469]
 zoom = Vector2(2, 2)
