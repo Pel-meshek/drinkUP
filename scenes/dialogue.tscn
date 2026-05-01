@@ -7,10 +7,10 @@
 script = ExtResource("1_3n4vj")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=257934461]
-offset_left = 59.0
-offset_top = 99.0
-offset_right = 803.0
-offset_bottom = 357.0
+offset_left = 233.0
+offset_top = 208.0
+offset_right = 977.0
+offset_bottom = 466.0
 texture = ExtResource("1_jwyou")
 region_rect = Rect2(2.4339218, 19.051218, 57.889343, 24.592085)
 
