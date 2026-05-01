@@ -50,7 +50,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [node name="Player" type="CharacterBody2D" unique_id=1896740672]
@@ -62,10 +62,12 @@ shape = SubResource("RectangleShape2D_hqtel")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1758560911]
 position = Vector2(4.7683716e-07, -3.0000005)
+rotation = -1.5707964
 scale = Vector2(1.6582031, 1.6582031)
 sprite_frames = SubResource("SpriteFrames_sweqy")
-animation = &"idle"
+animation = &"walk"
 autoplay = "idle"
+flip_v = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=655207469]
 zoom = Vector2(2, 2)

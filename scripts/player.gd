@@ -2,30 +2,26 @@ extends CharacterBody2D
 
 
 const SPEED = 200.0
+@export var speed: float = 200.0
+@export var rotation_speed: float = 10.0 # Скорость поворота (чем выше, тем резче)
 
 
 func _physics_process(delta: float) -> void:
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction_x := Input.get_axis("left", "right")
-	if direction_x:
-		velocity.x = direction_x * SPEED
-		$AnimatedSprite2D.flip_h = true
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		$AnimatedSprite2D.flip_h = false
-	var direction_y := Input.get_axis("up","down")
-	if direction_y >= 0:
-		velocity.y = direction_y * SPEED
-		$AnimatedSprite2D.flip_v = true
-	elif direction_y < 0:
-		velocity.y = direction_y * SPEED
-		$AnimatedSprite2D.flip_v = false
-	else:
-		velocity.y = move_toward(velocity.y, 0, SPEED)
-	if direction_x or direction_y:
+	# 1. Получаем направление ввода (-1 до 1)
+	var input_dir = Input.get_vector("left", "right", "up", "down")
+	
+	# 2. Движение
+	velocity = input_dir * speed
+	
+	# 3. Поворот спрайта
+	if input_dir.length() > 0:
+		# Вычисляем целевой угол в радианах
+		var target_angle = input_dir.angle()
 		$AnimatedSprite2D.play("walk")
+		
+		# Плавный поворот к цели (lerp_angle корректно обрабатывает переход через 180/-180 градусов)
+		rotation = lerp_angle(rotation, target_angle, rotation_speed * delta)
 	else:
 		$AnimatedSprite2D.play("idle")
 	move_and_slide()
