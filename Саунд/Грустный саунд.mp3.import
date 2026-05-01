@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c2ld31difca5j"
+path="res://.godot/imported/Грустный саунд.mp3-0f587a1e4d7d467775aabd7b4a18a13e.mp3str"
+
+[deps]
+
+source_file="res://Саунд/Грустный саунд.mp3"
+dest_files=["res://.godot/imported/Грустный саунд.mp3-0f587a1e4d7d467775aabd7b4a18a13e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

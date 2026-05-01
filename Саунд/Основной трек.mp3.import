@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dos3ucfh6gg1m"
+path="res://.godot/imported/Основной трек.mp3-0720bbddd1d406d10cef752fe49138a4.mp3str"
+
+[deps]
+
+source_file="res://Саунд/Основной трек.mp3"
+dest_files=["res://.godot/imported/Основной трек.mp3-0720bbddd1d406d10cef752fe49138a4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

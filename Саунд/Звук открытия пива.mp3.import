@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://lcvefeh7xxkn"
+path="res://.godot/imported/Звук открытия пива.mp3-b0b1c6c870115352ece6dd7932fa556c.mp3str"
+
+[deps]
+
+source_file="res://Саунд/Звук открытия пива.mp3"
+dest_files=["res://.godot/imported/Звук открытия пива.mp3-b0b1c6c870115352ece6dd7932fa556c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b5cjc12i4ypev"
+path="res://.godot/imported/Звук прихода белки.mp3-8aa93aaaec44ff77bfd42ae4f8e21d6b.mp3str"
+
+[deps]
+
+source_file="res://Саунд/Звук прихода белки.mp3"
+dest_files=["res://.godot/imported/Звук прихода белки.mp3-8aa93aaaec44ff77bfd42ae4f8e21d6b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

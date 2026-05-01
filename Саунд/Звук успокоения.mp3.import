@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dos2f4vcte0po"
+path="res://.godot/imported/Звук успокоения.mp3-e6a6b194ce165e2e4de3fa284ec391d2.mp3str"
+
+[deps]
+
+source_file="res://Саунд/Звук успокоения.mp3"
+dest_files=["res://.godot/imported/Звук успокоения.mp3-e6a6b194ce165e2e4de3fa284ec391d2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
