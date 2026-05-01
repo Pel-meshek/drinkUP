@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://chu7n8lqu88sa" path="res://scripts/garage.gd" id="1_oyih7"]
 [ext_resource type="Texture2D" uid="uid://ci1f7bb7vnvnm" path="res://assets/backgroung.png" id="2_m72hl"]
 [ext_resource type="Texture2D" uid="uid://dw776bop23hix" path="res://assets/Пол.png" id="3_v0fcm"]
-[ext_resource type="Texture2D" uid="uid://btiqs7wb1som7" path="res://assets/wall.png" id="4_w2145"]
 [ext_resource type="Texture2D" uid="uid://bnlko8fls35vq" path="res://assets/table.png" id="5_0785v"]
 [ext_resource type="Texture2D" uid="uid://d1joo7fp7xc7p" path="res://assets/ДИВАН.png" id="5_spycl"]
 [ext_resource type="Script" uid="uid://cn5wfc1th6hy" path="res://scripts/kotel.gd" id="6_nulr8"]
@@ -25,7 +24,6 @@
 [ext_resource type="PackedScene" uid="uid://k85ld780p7cg" path="res://scenes/belka.tscn" id="23_5080d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_chw17"]
-texture = ExtResource("4_w2145")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
