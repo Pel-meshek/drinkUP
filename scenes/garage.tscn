@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bu6e2wpgxd36t" path="res://assets/icon.svg" id="2_8ish0"]
 [ext_resource type="Texture2D" uid="uid://b52dj0uqk41b2" path="res://assets/floor.png" id="3_4laxj"]
 [ext_resource type="Texture2D" uid="uid://btiqs7wb1som7" path="res://assets/wall.png" id="4_w2145"]
-[ext_resource type="Texture2D" uid="uid://d1joo7fp7xc7p" path="res://assets/Диван.png" id="5_spycl"]
+[ext_resource type="Texture2D" uid="uid://d1joo7fp7xc7p" path="res://assets/ДИВАН.png" id="5_spycl"]
 [ext_resource type="Script" uid="uid://cn5wfc1th6hy" path="res://scripts/kotel.gd" id="6_nulr8"]
 [ext_resource type="Texture2D" uid="uid://b16bsy7gpr3s8" path="res://assets/kotel.jpg" id="7_sxw43"]
 [ext_resource type="AudioStream" uid="uid://ca0fxrgo7b8ok" path="res://Саунд/Кипение воды.mp3" id="8_8ish0"]
