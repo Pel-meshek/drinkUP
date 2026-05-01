@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc1rcx0ghkyxe"
-path="res://.godot/imported/stol.png-14d24933a44be2ae6a3f7d280ce56cdf.ctex"
+uid="uid://ddab8iervxr2t"
+path="res://.godot/imported/Котел4.png-a8f15213944d0c4079494e06c9f616f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/stol.png"
-dest_files=["res://.godot/imported/stol.png-14d24933a44be2ae6a3f7d280ce56cdf.ctex"]
+source_file="res://assets/Котел/Котел4.png"
+dest_files=["res://.godot/imported/Котел4.png-a8f15213944d0c4079494e06c9f616f0.ctex"]
 
 [params]
 

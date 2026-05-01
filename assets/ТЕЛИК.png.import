@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b52dj0uqk41b2"
-path="res://.godot/imported/floor.png-38406586736af2fe805d7b886727ee47.ctex"
+uid="uid://3pb7pb7uh56s"
+path="res://.godot/imported/ТЕЛИК.png-f6ae4a53cb02f1fd6c9a330fb7945228.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/floor.png"
-dest_files=["res://.godot/imported/floor.png-38406586736af2fe805d7b886727ee47.ctex"]
+source_file="res://assets/ТЕЛИК.png"
+dest_files=["res://.godot/imported/ТЕЛИК.png-f6ae4a53cb02f1fd6c9a330fb7945228.ctex"]
 
 [params]
 
