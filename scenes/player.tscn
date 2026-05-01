@@ -73,14 +73,6 @@ animation = &"walk"
 autoplay = "idle"
 flip_v = true
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=655207469]
-zoom = Vector2(6, 6)
-limit_enabled = false
-limit_left = 67
-limit_top = -80
-limit_right = 1167
-limit_bottom = 690
-
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=37286401]
 stream = ExtResource("10_y4r1p")
 

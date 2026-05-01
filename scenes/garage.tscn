@@ -285,6 +285,10 @@ texture = ExtResource("19_q361v")
 [node name="CharacterBody2D" parent="." unique_id=2000938191 instance=ExtResource("23_5080d")]
 position = Vector2(377, 143)
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1873902374]
+position = Vector2(244, 143)
+zoom = Vector2(4, 4)
+
 [connection signal="body_entered" from="kotel/Area2D" to="kotel" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="kotel/Area2D" to="kotel" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="stol/Area2D" to="stol" method="_on_area_2d_body_entered"]
