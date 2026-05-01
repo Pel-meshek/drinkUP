@@ -19,6 +19,7 @@ func _input(event):
 		start_timer()
 
 func start_timer():
+	$AudioStreamPlayer2D.play()
 	is_timer_active = true
 	is_active = false
 	timer_label.visible = true
@@ -33,6 +34,7 @@ func start_timer():
 	timer_label.visible = false
 	is_active = true
 	is_timer_active = false
+	$AudioStreamPlayer2D.stop()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
