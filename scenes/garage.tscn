@@ -183,6 +183,14 @@ script = ExtResource("1_oyih7")
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=436561811]
 tile_set = SubResource("TileSet_mjmn4")
 
+[node name="Диван" type="Sprite2D" parent="." unique_id=1235100234]
+position = Vector2(1004.99994, 285)
+scale = Vector2(2.09375, 2.09375)
+texture = ExtResource("5_spycl")
+
+[node name="Player" parent="." unique_id=1896740672 instance=ExtResource("10_q361v")]
+position = Vector2(603, 321)
+
 [node name="kotel" type="StaticBody2D" parent="." unique_id=1397662955]
 script = ExtResource("6_nulr8")
 
@@ -215,11 +223,6 @@ stream = ExtResource("8_8ish0")
 volume_db = -5.295
 max_distance = 1249.0
 
-[node name="Диван" type="Sprite2D" parent="." unique_id=1235100234]
-position = Vector2(1004.99994, 285)
-scale = Vector2(2.09375, 2.09375)
-texture = ExtResource("5_spycl")
-
 [node name="stol" type="StaticBody2D" parent="." unique_id=605600571]
 script = ExtResource("8_hq1gk")
 
@@ -246,9 +249,6 @@ shape = SubResource("RectangleShape2D_p2t0x")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="stol" unique_id=467442318]
 stream = ExtResource("11_w2145")
-
-[node name="Player" parent="." unique_id=1896740672 instance=ExtResource("10_q361v")]
-position = Vector2(603, 321)
 
 [node name="ГрустныйСаунд" type="AudioStreamPlayer" parent="." unique_id=801783800]
 stream = ExtResource("12_4laxj")
