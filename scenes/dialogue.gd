@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@export var text_speed: float = 0.25 # Секунд на букву
+@export var text_speed: float = 0.05 # Секунд на букву
 var is_typing: bool = false
 var stop = false
 
@@ -13,15 +13,11 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if not stop:
-		type_text("Бухай блять")
-	elif Input.is_action_just_pressed("skip"):
-		queue_free()
+		type_text("Бухай")
 
 # Эффект печатной машинки
 func type_text(new_text: String):
 	if is_typing:
-		if is_typing and Input.is_action_just_pressed("skip"):
-			text_speed = 0.01
 		return # Защита от повторного запуска
 	
 	is_typing = true
@@ -30,5 +26,6 @@ func type_text(new_text: String):
 	for char in new_text:
 		$NinePatchRect/Message.text += char
 		await get_tree().create_timer(text_speed).timeout
+		
 	is_typing = false
 	stop = true

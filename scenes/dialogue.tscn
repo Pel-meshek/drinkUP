@@ -1,42 +1,31 @@
 [gd_scene format=3 uid="uid://dacv2754hedak"]
 
 [ext_resource type="Script" uid="uid://cb5l2p2dey7go" path="res://scenes/dialogue.gd" id="1_3n4vj"]
-<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://bnlko8fls35vq" path="res://assets/table.png" id="1_jwyou"]
-=======
-[ext_resource type="Texture2D" uid="uid://dwvr5fjao872y" path="res://assets/window.png" id="2_3n4vj"]
->>>>>>> Stashed changes
 
 [node name="Dialogue" type="CanvasLayer" unique_id=198509155]
 script = ExtResource("1_3n4vj")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=257934461]
-offset_left = 14.0
-offset_top = 817.0
-offset_right = 1896.0
-offset_bottom = 1075.0
-texture = ExtResource("2_3n4vj")
-region_rect = Rect2(0.02516365, 14.180414, 66.568665, 45.194527)
-patch_margin_left = 4
-patch_margin_top = 6
-patch_margin_right = 7
-patch_margin_bottom = 7
+offset_left = 59.0
+offset_top = 99.0
+offset_right = 803.0
+offset_bottom = 357.0
+texture = ExtResource("1_jwyou")
+region_rect = Rect2(2.4339218, 19.051218, 57.889343, 24.592085)
 
 [node name="Name" type="RichTextLabel" parent="NinePatchRect" unique_id=68285725]
 layout_mode = 0
-offset_left = 50.0
-offset_top = 32.0
-offset_right = 227.0
-offset_bottom = 90.0
-theme_override_font_sizes/normal_font_size = 40
+offset_left = 30.0
+offset_top = 38.0
+offset_right = 117.0
+offset_bottom = 78.0
 text = "Белочка"
 
 [node name="Message" type="RichTextLabel" parent="NinePatchRect" unique_id=1078892700]
 layout_mode = 0
-offset_left = 55.0
-offset_top = 112.0
-offset_right = 479.0
-offset_bottom = 212.0
-theme_override_font_sizes/normal_font_size = 30
+offset_left = 34.0
+offset_top = 98.0
+offset_right = 179.0
+offset_bottom = 138.0
 bbcode_enabled = true
-text = "фплофпщдлофопдофпдофпд"
