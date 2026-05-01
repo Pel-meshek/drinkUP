@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dacv2754hedak"]
+
+[ext_resource type="Script" uid="uid://cb5l2p2dey7go" path="res://scenes/dialogue.gd" id="1_3n4vj"]
+[ext_resource type="Texture2D" uid="uid://bc1rcx0ghkyxe" path="res://assets/stol.png" id="1_jwyou"]
+
+[node name="Dialogue" type="CanvasLayer" unique_id=198509155]
+script = ExtResource("1_3n4vj")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=257934461]
+offset_left = 59.0
+offset_top = 99.0
+offset_right = 803.0
+offset_bottom = 357.0
+texture = ExtResource("1_jwyou")
+region_rect = Rect2(2.4339218, 19.051218, 57.889343, 24.592085)
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRect" unique_id=68285725]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 38.0
+offset_right = 117.0
+offset_bottom = 78.0
+text = "Белочка"
+
+[node name="Message" type="RichTextLabel" parent="NinePatchRect" unique_id=1078892700]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 98.0
+offset_right = 179.0
+offset_bottom = 138.0
+bbcode_enabled = true
