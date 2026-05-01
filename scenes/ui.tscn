@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://dhucc0jp1i5vc"]
+
+[ext_resource type="Script" uid="uid://blb6e62y7vvtu" path="res://scripts/ui.gd" id="1_8dubc"]
+[ext_resource type="Texture2D" uid="uid://vf5c5ty38uuw" path="res://assets/Индикатор/Пивность1.png" id="1_wm3ai"]
+[ext_resource type="Texture2D" uid="uid://cwdevoblyjekx" path="res://assets/Индикатор/Пивность2.png" id="2_8dubc"]
+[ext_resource type="Texture2D" uid="uid://bligev0vbxapw" path="res://assets/Индикатор/Пивность3.png" id="3_p7vwb"]
+[ext_resource type="Texture2D" uid="uid://8be2jaqd85r8" path="res://assets/Индикатор/Пивность4.png" id="4_ktti3"]
+[ext_resource type="Texture2D" uid="uid://dslon40t7vpdp" path="res://assets/Индикатор/Пивность5.png" id="5_cgfq5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7dvkv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wm3ai")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8dubc")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_p7vwb")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ktti3")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_cgfq5")
+}],
+"loop": true,
+"name": &"5",
+"speed": 5.0
+}]
+
+[node name="UI" type="CanvasLayer" unique_id=385884447]
+script = ExtResource("1_8dubc")
+
+[node name="Score HUD" type="AnimatedSprite2D" parent="." unique_id=976957055]
+position = Vector2(1452, 1488)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_7dvkv")
+animation = &"4"
