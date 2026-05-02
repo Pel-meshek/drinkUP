@@ -13,6 +13,7 @@ offset_bottom = 1073.0
 script = ExtResource("1_0yiix")
 
 [node name="Button" type="Button" parent="." unique_id=1241147147]
+visible = false
 texture_filter = 2
 texture_repeat = 1
 layout_mode = 1
@@ -30,7 +31,6 @@ theme_override_font_sizes/font_size = 50
 text = "Заказы"
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1677441654]
-visible = false
 layout_mode = 0
 offset_left = 1125.0
 offset_top = 782.0

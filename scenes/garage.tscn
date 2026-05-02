@@ -64,10 +64,12 @@
 [ext_resource type="Texture2D" uid="uid://fb7nni6qrogh" path="res://assets/Скиллчек/Скиллчек20.png" id="47_fm51g"]
 [ext_resource type="Texture2D" uid="uid://c0u6cq540hxfh" path="res://assets/Скиллчек/Скиллчек21.png" id="48_sebuw"]
 [ext_resource type="Texture2D" uid="uid://vrq45fl5bsgn" path="res://assets/Скиллчек/Скиллчек22.png" id="49_rfe51"]
+[ext_resource type="Script" uid="uid://dyq0n2b0v87mh" path="res://scripts/door.gd" id="53_a3l7v"]
 [ext_resource type="FontFile" uid="uid://mca6jyx15p1q" path="res://assets/Font/RobotoSlab-Regular.ttf" id="61_kr3w1"]
 [ext_resource type="Script" uid="uid://cyx6lu76448hd" path="res://scripts/hmel.gd" id="63_flowt"]
 [ext_resource type="Script" uid="uid://siscuwkux20q" path="res://scripts/brodilka.gd" id="63_fma1v"]
 [ext_resource type="PackedScene" uid="uid://duvilworqtnmx" path="res://scenes/orderUI.tscn" id="68_fma1v"]
+[ext_resource type="PackedScene" uid="uid://bro0mfynjnqds" path="res://scenes/recepts.tscn" id="69_34iyq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mpr7"]
 texture = ExtResource("3_lqxlc")
@@ -565,6 +567,9 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v6vtq"]
 size = Vector2(29, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a3l7v"]
+size = Vector2(56, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0juyn"]
 size = Vector2(31, 51.125)
@@ -1126,6 +1131,7 @@ position = Vector2(97, 50)
 stream = ExtResource("11_w2145")
 
 [node name="door" type="StaticBody2D" parent="varka" unique_id=1002873699]
+script = ExtResource("53_a3l7v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="varka/door" unique_id=1233277330]
 position = Vector2(368, 240)
@@ -1135,6 +1141,12 @@ sprite_frames = SubResource("SpriteFrames_m472b")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="varka/door" unique_id=943459110]
 position = Vector2(368.5, 263)
 shape = SubResource("RectangleShape2D_v6vtq")
+
+[node name="Area2D" type="Area2D" parent="varka/door" unique_id=1404048205]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="varka/door/Area2D" unique_id=894393998]
+position = Vector2(370, 255.5)
+shape = SubResource("RectangleShape2D_a3l7v")
 
 [node name="solods" type="StaticBody2D" parent="varka" unique_id=132550313]
 script = ExtResource("38_0juyn")
@@ -1249,17 +1261,26 @@ text_speed = 0.05
 [node name="UI" parent="Camera2D" unique_id=385884447 instance=ExtResource("25_4y4st")]
 follow_viewport_enabled = true
 
-[node name="Control" parent="." unique_id=1955629088 instance=ExtResource("68_fma1v")]
+[node name="Control" parent="Camera2D" unique_id=1955629088 instance=ExtResource("68_fma1v")]
+visible = false
 offset_left = -112.00001
 offset_top = -59.0
 offset_right = 1792.6667
 offset_bottom = 1035.3334
 scale = Vector2(0.3, 0.3)
 
+[node name="recepts" parent="Camera2D" unique_id=902733656 instance=ExtResource("69_34iyq")]
+offset_top = 2.0
+offset_right = 1900.0
+offset_bottom = 942.0
+scale = Vector2(0.25, 0.25)
+
 [connection signal="body_entered" from="varka/kotel/Area2D" to="varka/kotel" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="varka/kotel/Area2D" to="varka/kotel" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="varka/stol/Area2D" to="varka/stol" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="varka/stol/Area2D" to="varka/stol" method="_on_area_2d_body_exited"]
+[connection signal="area_entered" from="varka/door/Area2D" to="varka/door" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="varka/door/Area2D" to="varka/door" method="_on_area_2d_area_exited"]
 [connection signal="area_entered" from="varka/solods/pilsner" to="varka/solods" method="_on_pilsner_area_entered"]
 [connection signal="area_entered" from="varka/solods/munhen" to="varka/solods" method="_on_munhen_area_entered"]
 [connection signal="area_entered" from="varka/solods/caramel" to="varka/solods" method="_on_caramel_area_entered"]
