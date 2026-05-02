@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="drinkUP"
-run/main_scene="uid://4klhqsnlfeu1"
+run/main_scene="uid://dq5cv7wxtn2le"
 config/features=PackedStringArray("4.6", "Mobile")
 
 [autoload]
@@ -20,7 +20,17 @@ Global="*uid://lg6qbyj2qjx6"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/size/mode=3
+window/stretch/mode="canvas_items"
+
+[gui]
+
+theme/default_font_hinting=2
+theme/default_font_multichannel_signed_distance_field=true
+theme/lcd_subpixel_layout=0
+theme/custom_font="uid://mca6jyx15p1q"
 
 [input]
 

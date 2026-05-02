@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bj5ahv3lkm5q8"]
+
+[ext_resource type="Texture2D" uid="uid://lt66v6elo6fj" path="res://assets/оконо.png" id="1_c4rma"]
+[ext_resource type="FontFile" uid="uid://c5km6dgba1djk" path="res://assets/Font/RobotoSlab-Black.ttf" id="2_ghj5q"]
+
+[node name="Order" type="CanvasLayer" unique_id=1438969689]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1278138376]
+offset_right = 1146.0
+offset_bottom = 637.0
+texture = ExtResource("1_c4rma")
+region_rect = Rect2(0.019435883, 0.11133909, 64.265686, 31.675972)
+patch_margin_left = 5
+patch_margin_top = 6
+patch_margin_right = 5
+patch_margin_bottom = 6
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect" unique_id=94083067]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 113.0
+offset_right = 915.0
+offset_bottom = 495.0
+theme_override_fonts/normal_font = ExtResource("2_ghj5q")
+theme_override_font_sizes/normal_font_size = 50
+text = "Заказ на сегодня:
+Светлый Лагер (Пильзнер + Магнум)
+Летний блонд (Пильзнер + Каскад)"
+
+[node name="Button" type="Button" parent="." unique_id=1422665066]
+offset_left = 870.0
+offset_top = 589.0
+offset_right = 1189.0
+offset_bottom = 597.0

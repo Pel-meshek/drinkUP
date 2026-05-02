@@ -28,6 +28,13 @@ func _physics_process(delta):
 	# Взаимодействие
 	if is_active and Input.is_action_just_pressed("interact"):
 		handle_interaction()
+	if is_active and Input.is_action_just_pressed("drop"):
+		current_state = State.EMPTY
+		$TimerLabel/Skillcheck.visible = false
+		brew_timer = 0.0
+		if audio.playing:
+			audio.stop()
+		update_visuals()
 
 func handle_interaction():
 	var held_item = Global.held_item
