@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b7cyp8bcdvvro" path="res://assets/Угол.png" id="4_4y4st"]
 [ext_resource type="Texture2D" uid="uid://bnlko8fls35vq" path="res://assets/table.png" id="5_0785v"]
 [ext_resource type="Texture2D" uid="uid://d1joo7fp7xc7p" path="res://assets/ДИВАН.png" id="5_spycl"]
+[ext_resource type="Texture2D" uid="uid://dvt0guyrrifm2" path="res://assets/Дверь/Анимация двери1.png" id="6_fujna"]
 [ext_resource type="Texture2D" uid="uid://dv1raixhp7p5g" path="res://assets/СТОЛ ОБЫЧНЫЙ.png" id="6_nmo5b"]
 [ext_resource type="Script" uid="uid://cn5wfc1th6hy" path="res://scripts/kotel.gd" id="6_nulr8"]
 [ext_resource type="Texture2D" uid="uid://dksbsyxh0n1ho" path="res://assets/СТУЛ.png" id="6_q361v"]
@@ -33,6 +34,14 @@
 [ext_resource type="PackedScene" uid="uid://dacv2754hedak" path="res://scenes/dialogue.tscn" id="22_sdyjj"]
 [ext_resource type="PackedScene" uid="uid://k85ld780p7cg" path="res://scenes/belka.tscn" id="23_5080d"]
 [ext_resource type="PackedScene" uid="uid://dhucc0jp1i5vc" path="res://scenes/ui.tscn" id="25_4y4st"]
+[ext_resource type="Texture2D" uid="uid://222o7slh7qlp" path="res://assets/Дверь/Анимация двери2.png" id="35_v6vtq"]
+[ext_resource type="Texture2D" uid="uid://iyaqy2bvkkow" path="res://assets/Дверь/Анимация двери3.png" id="36_0juyn"]
+[ext_resource type="Texture2D" uid="uid://3wpfkxlis8ty" path="res://assets/Дверь/Анимация двери4.png" id="37_ahcgg"]
+[ext_resource type="Script" uid="uid://cr28fps778guc" path="res://scenes/solods.gd" id="38_0juyn"]
+[ext_resource type="Texture2D" uid="uid://tx16hsriplij" path="res://assets/Дверь/Анимация двери5.png" id="38_l6jx5"]
+[ext_resource type="Texture2D" uid="uid://ctq6e3lhiun7" path="res://assets/Дверь/Анимация двери6.png" id="39_3fq53"]
+[ext_resource type="Texture2D" uid="uid://cgy3g4xnlcgru" path="res://assets/Дверь/Анимация двери7.png" id="40_b27yd"]
+[ext_resource type="Texture2D" uid="uid://bamil8pit8c78" path="res://assets/Дверь/Анимация двери8.png" id="41_lgefn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mpr7"]
 texture = ExtResource("3_lqxlc")
@@ -91,6 +100,13 @@ texture = ExtResource("5_spycl")
 4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.8992939, 8, -0.71943665, 8, 8, -8, 8)
 5:1/0 = 0
 5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.8992939, -0.26978874, -0.17985916, 0.08992958, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_54c2f"]
+texture = ExtResource("6_fujna")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -5.1259747, -8, -4.586399, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -5.1259747, -8, -4.586399, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v6vtq"]
 texture = ExtResource("6_nmo5b")
@@ -291,6 +307,7 @@ sources/10 = SubResource("TileSetAtlasSource_v6vtq")
 sources/11 = SubResource("TileSetAtlasSource_0juyn")
 sources/12 = SubResource("TileSetAtlasSource_ahcgg")
 sources/13 = SubResource("TileSetAtlasSource_mbu4q")
+sources/1 = SubResource("TileSetAtlasSource_54c2f")
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q361v"]
 animations = [{
@@ -327,10 +344,51 @@ animations = [{
 radius = 8.258057
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qfkxd"]
-size = Vector2(47, 40)
+size = Vector2(36, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p2t0x"]
-size = Vector2(77, 39)
+size = Vector2(70, 39)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m472b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_fujna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_v6vtq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_0juyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_ahcgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_l6jx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_3fq53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_b27yd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_lgefn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6vtq"]
+size = Vector2(29, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0juyn"]
+size = Vector2(31, 43)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ahcgg"]
+size = Vector2(95, 32)
 
 [node name="Garage" type="Node2D" unique_id=125230760]
 script = ExtResource("1_oyih7")
@@ -340,34 +398,48 @@ tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAAAAAEAAQAAAAEAAAABAAAAAQABAAA
 tile_set = SubResource("TileSet_mjmn4")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="TileMapLayer" unique_id=498011290]
-tile_map_data = PackedByteArray("AAAEAAIADQAAAAAAAAAEAAMADQAAAAEAAAAFAAIADQABAAAAAAAFAAMADQABAAEAAAAGAAIADQACAAAAAAAGAAMADQACAAEAAAAHAAIADQADAAAAAAAHAAMADQADAAEAAAAWAAgAAAAAAAAAAAAWAAkAAAAAAAEAAAAXAAgAAAABAAAAAAAXAAkAAAABAAEAAAAYAAgAAAACAAAAAAAYAAkAAAACAAEAAAAZAAgAAAADAAAAAAAZAAkAAAADAAEAAAAaAAgAAAAEAAAAAAAaAAkAAAAEAAEAAAAbAAgAAAAFAAAAAAAbAAkAAAAFAAEAAAAWAAIAAwAAAAAAAAAWAAMAAwAAAAEAAAAXAAIAAwABAAAAAAAXAAMAAwABAAEAAAAYAAIAAwACAAAAAAAYAAMAAwACAAEAAAAZAAIAAwADAAAAAAAZAAMAAwADAAEAAAAaAAIAAwAEAAAAAAAaAAMAAwAEAAEAAAAbAAIAAwAFAAAAAAAbAAMAAwAFAAEAAAACAAoACwAAAAAAAAACAAsACwAAAAEAAAADAAoACwABAAAAAAADAAsACwABAAEAAAACAAwADAAAAAAAAAACAA0ADAAAAAEAAAADAAwADAABAAAAAAADAA0ADAABAAEAAAAHAA4ABwAAAAAAAAAHAA8ABwAAAAEAAAAIAA4ABwABAAAAAAAIAA8ABwABAAEAAAAJAA4ABwACAAAAAAAJAA8ABwACAAEAAAAKAA4ABwADAAAAAAAKAA8ABwADAAEAAAAUAAsABgAAAAAAAAAUAAwABgAAAAEAAAAUAA0ABgAAAAIAAAAUAA4ABgAAAAMAAAAVAAsABgABAAAAAAAVAAwABgABAAEAAAAVAA0ABgABAAIAAAAVAA4ABgABAAMAAAAWAAsABgACAAAAAAAWAAwABgACAAEAAAAWAA0ABgACAAIAAAAWAA4ABgACAAMAAAAXAAsABgADAAAAAAAXAAwABgADAAEAAAAXAA0ABgADAAIAAAAXAA4ABgADAAMAAAAYAAsABgAEAAAAAAAYAAwABgAEAAEAAAAYAA0ABgAEAAIAAAAYAA4ABgAEAAMAAAAZAAsABgAFAAAAAAAZAAwABgAFAAEAAAAZAA0ABgAFAAIAAAAZAA4ABgAFAAMAAAAOAAIABQAAAAAAAAAOAAMABQAAAAEAAAAPAAIABQABAAAAAAAPAAMABQABAAEAAAAQAAIACAAAAAAAAAAQAAMACAAAAAEAAAARAAIACAABAAAAAAARAAMACAABAAEAAAASAAIACQAAAAAAAAASAAMACQAAAAEAAAATAAIACQABAAAAAAATAAMACQABAAEAAAACAAcABAAAAAAAAAACAAgABAAAAAEAAAADAAcABAABAAAAAAADAAgABAABAAEAAAACAAQABAAAAAAAAAACAAUABAAAAAEAAAADAAQABAABAAAAAAADAAUABAABAAEAAAAIAAcACgAAAAAAAAAIAAgACgAAAAEAAAAIAAkACgAAAAIAAAAIAAoACgAAAAMAAAAJAAcACgABAAAAAAAJAAgACgABAAEAAAAJAAkACgABAAIAAAAJAAoACgABAAMAAAAKAAcACgACAAAAAAAKAAgACgACAAEAAAAKAAkACgACAAIAAAAKAAoACgACAAMAAAALAAcACgADAAAAAAALAAgACgADAAEAAAALAAkACgADAAIAAAALAAoACgADAAMAAAAGAAgAAgAAAAAAAAAGAAkAAgAAAAEAAAAHAAgAAgABAAAAAAAHAAkAAgABAAEAAAANAAgAAgAAAAAAABAMAAgAAgABAAAAABANAAkAAgAAAAEAABAMAAkAAgABAAEAABA=")
+tile_map_data = PackedByteArray("AAAEAAIADQAAAAAAAAAEAAMADQAAAAEAAAAFAAIADQABAAAAAAAFAAMADQABAAEAAAAGAAIADQACAAAAAAAGAAMADQACAAEAAAAHAAIADQADAAAAAAAHAAMADQADAAEAAAAWAAgAAAAAAAAAAAAWAAkAAAAAAAEAAAAXAAgAAAABAAAAAAAXAAkAAAABAAEAAAAYAAgAAAACAAAAAAAYAAkAAAACAAEAAAAZAAgAAAADAAAAAAAZAAkAAAADAAEAAAAaAAgAAAAEAAAAAAAaAAkAAAAEAAEAAAAbAAgAAAAFAAAAAAAbAAkAAAAFAAEAAAAWAAIAAwAAAAAAAAAWAAMAAwAAAAEAAAAXAAIAAwABAAAAAAAXAAMAAwABAAEAAAAYAAIAAwACAAAAAAAYAAMAAwACAAEAAAAZAAIAAwADAAAAAAAZAAMAAwADAAEAAAAaAAIAAwAEAAAAAAAaAAMAAwAEAAEAAAAbAAIAAwAFAAAAAAAbAAMAAwAFAAEAAAACAAoACwAAAAAAAAACAAsACwAAAAEAAAADAAoACwABAAAAAAADAAsACwABAAEAAAACAAwADAAAAAAAAAACAA0ADAAAAAEAAAADAAwADAABAAAAAAADAA0ADAABAAEAAAAHAA4ABwAAAAAAAAAHAA8ABwAAAAEAAAAIAA4ABwABAAAAAAAIAA8ABwABAAEAAAAJAA4ABwACAAAAAAAJAA8ABwACAAEAAAAKAA4ABwADAAAAAAAKAA8ABwADAAEAAAAUAAsABgAAAAAAAAAUAAwABgAAAAEAAAAUAA0ABgAAAAIAAAAUAA4ABgAAAAMAAAAVAAsABgABAAAAAAAVAAwABgABAAEAAAAVAA0ABgABAAIAAAAVAA4ABgABAAMAAAAWAAsABgACAAAAAAAWAAwABgACAAEAAAAWAA0ABgACAAIAAAAWAA4ABgACAAMAAAAXAAsABgADAAAAAAAXAAwABgADAAEAAAAXAA0ABgADAAIAAAAXAA4ABgADAAMAAAAYAAsABgAEAAAAAAAYAAwABgAEAAEAAAAYAA0ABgAEAAIAAAAYAA4ABgAEAAMAAAAZAAsABgAFAAAAAAAZAAwABgAFAAEAAAAZAA0ABgAFAAIAAAAZAA4ABgAFAAMAAAAOAAIABQAAAAAAAAAOAAMABQAAAAEAAAAPAAIABQABAAAAAAAPAAMABQABAAEAAAAQAAIACAAAAAAAAAAQAAMACAAAAAEAAAARAAIACAABAAAAAAARAAMACAABAAEAAAASAAIACQAAAAAAAAASAAMACQAAAAEAAAATAAIACQABAAAAAAATAAMACQABAAEAAAACAAcABAAAAAAAAAACAAgABAAAAAEAAAADAAcABAABAAAAAAADAAgABAABAAEAAAACAAQABAAAAAAAAAACAAUABAAAAAEAAAADAAQABAABAAAAAAADAAUABAABAAEAAAAIAAcACgAAAAAAAAAIAAgACgAAAAEAAAAIAAkACgAAAAIAAAAIAAoACgAAAAMAAAAJAAcACgABAAAAAAAJAAgACgABAAEAAAAJAAkACgABAAIAAAAJAAoACgABAAMAAAAKAAcACgACAAAAAAAKAAgACgACAAEAAAAKAAkACgACAAIAAAAKAAoACgACAAMAAAALAAcACgADAAAAAAALAAgACgADAAEAAAALAAkACgADAAIAAAALAAoACgADAAMAAAAGAAgAAgAAAAAAAAAGAAkAAgAAAAEAAAAHAAgAAgABAAAAAAAHAAkAAgABAAEAAAANAAgAAgAAAAAAABAMAAgAAgABAAAAABANAAkAAgAAAAEAABAMAAkAAgABAAEAABAWAA8AAQAAAAAAAGAXAA8AAQAAAAEAAGA=")
 tile_set = SubResource("TileSet_4y4st")
+
+[node name="light" type="Node2D" parent="." unique_id=1879950641]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="light" unique_id=1113064694]
+energy = 0.3
+blend_mode = 1
+
+[node name="PointLight2D" type="PointLight2D" parent="light" unique_id=2142955209]
+position = Vector2(398.00003, 61.999992)
+scale = Vector2(1.2031251, 1.4687496)
+shadow_enabled = true
+texture = ExtResource("19_q361v")
 
 [node name="Player" parent="." unique_id=1896740672 instance=ExtResource("10_q361v")]
 position = Vector2(244, 148)
 
-[node name="kotel" type="StaticBody2D" parent="." unique_id=1397662955]
+[node name="varka" type="Node2D" parent="." unique_id=315141981]
+
+[node name="kotel" type="StaticBody2D" parent="varka" unique_id=1397662955]
 position = Vector2(-201, 0)
 script = ExtResource("6_nulr8")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="kotel" unique_id=321625484]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="varka/kotel" unique_id=321625484]
 position = Vector2(379, 48)
 sprite_frames = SubResource("SpriteFrames_q361v")
 animation = &"пустой"
 autoplay = "пустой"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="kotel" unique_id=89583594]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="varka/kotel" unique_id=89583594]
 position = Vector2(379, 48)
 scale = Vector2(1.9375, 1.84375)
 shape = SubResource("CircleShape2D_spycl")
 
-[node name="Area2D" type="Area2D" parent="kotel" unique_id=1198677189]
+[node name="Area2D" type="Area2D" parent="varka/kotel" unique_id=1198677189]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="kotel/Area2D" unique_id=1742317133]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="varka/kotel/Area2D" unique_id=1742317133]
 position = Vector2(379, 51)
 shape = SubResource("RectangleShape2D_qfkxd")
 
-[node name="TimerLabel" type="Label" parent="kotel" unique_id=31578344]
+[node name="TimerLabel" type="Label" parent="varka/kotel" unique_id=31578344]
 offset_left = 369.0
 offset_top = 10.0
 offset_right = 409.0
@@ -375,58 +447,91 @@ offset_bottom = 59.0
 text = "60
 "
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="kotel" unique_id=1986010220]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="varka/kotel" unique_id=1986010220]
 position = Vector2(378, 49)
 stream = ExtResource("8_8ish0")
 volume_db = -5.295
 max_distance = 1249.0
 
-[node name="stol" type="StaticBody2D" parent="." unique_id=605600571]
+[node name="stol" type="StaticBody2D" parent="varka" unique_id=605600571]
 script = ExtResource("8_hq1gk")
 
-[node name="StolTimerLabel" type="Label" parent="stol" unique_id=852727910]
+[node name="StolTimerLabel" type="Label" parent="varka/stol" unique_id=852727910]
 offset_left = 78.0
 offset_top = 12.0
 offset_right = 118.0
 offset_bottom = 35.0
 
-[node name="Area2D" type="Area2D" parent="stol" unique_id=1333890588]
+[node name="Area2D" type="Area2D" parent="varka/stol" unique_id=1333890588]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="stol/Area2D" unique_id=691416102]
-position = Vector2(97.5, 49.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="varka/stol/Area2D" unique_id=691416102]
+position = Vector2(96, 49.5)
 shape = SubResource("RectangleShape2D_p2t0x")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="stol" unique_id=467442318]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="varka/stol" unique_id=467442318]
 position = Vector2(97, 50)
 stream = ExtResource("11_w2145")
+
+[node name="door" type="StaticBody2D" parent="varka" unique_id=1002873699]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="varka/door" unique_id=1233277330]
+position = Vector2(368, 240)
+rotation = -1.5707964
+sprite_frames = SubResource("SpriteFrames_m472b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="varka/door" unique_id=943459110]
+position = Vector2(368.5, 263)
+shape = SubResource("RectangleShape2D_v6vtq")
+
+[node name="solods" type="StaticBody2D" parent="varka" unique_id=132550313]
+script = ExtResource("38_0juyn")
+
+[node name="pilsner" type="Area2D" parent="varka/solods" unique_id=826106598]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="varka/solods/pilsner" unique_id=1841451480]
+position = Vector2(304, 53)
+shape = SubResource("RectangleShape2D_0juyn")
+
+[node name="munhen" type="Area2D" parent="varka/solods" unique_id=1722777062]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="varka/solods/munhen" unique_id=2013590762]
+position = Vector2(271.5, 53.5)
+shape = SubResource("RectangleShape2D_0juyn")
+
+[node name="caramel" type="Area2D" parent="varka/solods" unique_id=419213044]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="varka/solods/caramel" unique_id=397195449]
+position = Vector2(239, 53)
+shape = SubResource("RectangleShape2D_0juyn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="varka/solods" unique_id=1167703762]
+position = Vector2(271.5, 48)
+shape = SubResource("RectangleShape2D_ahcgg")
 
 [node name="ГрустныйСаунд" type="AudioStreamPlayer" parent="." unique_id=801783800]
 stream = ExtResource("12_4laxj")
 volume_db = -31.57
 autoplay = true
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1113064694]
-energy = 0.3
-blend_mode = 1
-
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=2142955209]
-position = Vector2(398.00003, 61.999992)
-scale = Vector2(1.2031251, 1.4687496)
-shadow_enabled = true
-texture = ExtResource("19_q361v")
-
 [node name="Dialogue" parent="." unique_id=198509155 instance=ExtResource("22_sdyjj")]
 
-[node name="CharacterBody2D" parent="." unique_id=2000938191 instance=ExtResource("23_5080d")]
+[node name="belka" parent="." unique_id=2000938191 instance=ExtResource("23_5080d")]
 position = Vector2(377, 143)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1873902374]
-position = Vector2(240, 144)
-zoom = Vector2(6, 6)
+anchor_mode = 0
+zoom = Vector2(4, 4)
 
-[node name="UI" parent="." unique_id=385884447 instance=ExtResource("25_4y4st")]
+[node name="UI" parent="Camera2D" unique_id=385884447 instance=ExtResource("25_4y4st")]
+follow_viewport_enabled = true
 
-[connection signal="body_entered" from="kotel/Area2D" to="kotel" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="kotel/Area2D" to="kotel" method="_on_area_2d_body_exited"]
-[connection signal="body_entered" from="stol/Area2D" to="stol" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="stol/Area2D" to="stol" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="varka/kotel/Area2D" to="varka/kotel" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="varka/kotel/Area2D" to="varka/kotel" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="varka/stol/Area2D" to="varka/stol" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="varka/stol/Area2D" to="varka/stol" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="varka/solods/pilsner" to="varka/solods" method="_on_pilsner_body_entered"]
+[connection signal="body_exited" from="varka/solods/pilsner" to="varka/solods" method="_on_pilsner_body_exited"]
+[connection signal="body_entered" from="varka/solods/munhen" to="varka/solods" method="_on_munhen_body_entered"]
+[connection signal="body_exited" from="varka/solods/munhen" to="varka/solods" method="_on_munhen_body_exited"]
+[connection signal="body_entered" from="varka/solods/caramel" to="varka/solods" method="_on_caramel_body_entered"]
+[connection signal="body_exited" from="varka/solods/caramel" to="varka/solods" method="_on_caramel_body_exited"]

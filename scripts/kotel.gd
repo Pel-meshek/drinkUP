@@ -36,7 +36,7 @@ func start_timer():
 	
 	# Завершение
 	timer_label.visible = false
-	is_active = true
+	is_active = false
 	is_timer_active = false
 	$AudioStreamPlayer2D.stop()
 	$AnimatedSprite2D.play("пустой")

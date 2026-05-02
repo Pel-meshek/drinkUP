@@ -1,13 +1,33 @@
 extends CharacterBody2D
 
+enum {
+	EMPTY,
+	SOLOD,
+	SOLODREZ,
+	HMEL,
+	PIVO
+}
 
 const SPEED = 200.0
 @export var speed: float = 200.0
 @export var rotation_speed: float = 10.0 # Скорость поворота (чем выше, тем резче)
 var is_playing = false
+var state = EMPTY
+
 
 func _physics_process(delta: float) -> void:
-
+	match state:
+		EMPTY:
+			pass
+		SOLOD:
+			pass
+		SOLODREZ:
+			pass
+		HMEL:
+			pass
+		PIVO:
+			pass
+	
 	# 1. Получаем направление ввода (-1 до 1)
 	var input_dir = Input.get_vector("left", "right", "up", "down")
 	
@@ -27,7 +47,8 @@ func _physics_process(delta: float) -> void:
 			$AudioStreamPlayer2D.stop()
 			is_playing = false
 		$AnimatedSprite2D.play("idle")
-	move_and_slide()
 	if not is_playing:
 		$AudioStreamPlayer2D.play()
 		is_playing = true
+	move_and_slide()
+	
