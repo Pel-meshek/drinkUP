@@ -14,6 +14,10 @@ config/name="drinkUP"
 run/main_scene="uid://4klhqsnlfeu1"
 config/features=PackedStringArray("4.6", "Mobile")
 
+[autoload]
+
+Global="*uid://lg6qbyj2qjx6"
+
 [display]
 
 window/size/mode=3

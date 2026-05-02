@@ -1,10 +1,13 @@
 extends CanvasLayer
 
 var score = 0
-
+@onready var item_label = $Label
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+		# Подписываемся на сигнал изменения предмета
+	Global.item_changed.connect(_on_item_changed)
+	# Обновляем текст при старте (если что-то уже было)
+	_on_item_changed(Global.held_item)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,3 +25,11 @@ func _process(delta: float) -> void:
 
 func arm(item):
 	$Label.text = "В руках: " + "caramel"
+
+func _on_item_changed(new_item: String):
+	if new_item == "":
+		item_label.text = "Руки пусты"
+		item_label.modulate.a = 0.5 # Делаем тусклым
+	else:
+		item_label.text = "В руках: " + new_item
+		item_label.modulate.a = 1.0 # Яркий текст

@@ -15,7 +15,10 @@ func _input(event):
 	if state == inactive:
 		return
 	if state == caramel and event.is_action_pressed("interact"):
-		$"../../Player".solod_state("caramel")
+		if Global.held_item == "": # Если руки пусты
+			Global.take_item("caramel")
+		else:
+			print("Руки заняты!")
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
