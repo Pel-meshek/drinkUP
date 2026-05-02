@@ -511,7 +511,6 @@ shape = SubResource("RectangleShape2D_ahcgg")
 [node name="ГрустныйСаунд" type="AudioStreamPlayer" parent="." unique_id=801783800]
 stream = ExtResource("12_4laxj")
 volume_db = -31.57
-autoplay = true
 
 [node name="Dialogue" parent="." unique_id=198509155 instance=ExtResource("22_sdyjj")]
 
