@@ -18,8 +18,12 @@ func _input(event):
 		if Global.held_item == "": # Если руки пусты
 			Global.take_item("caramel")
 		else:
+			$Label.text = "Руки заняты"
+	if state == pilsner and event.is_action_pressed("interact"):
+		if Global.held_item == "": # Если руки пусты
+			Global.take_item("pilsner")
+		else:
 			print("Руки заняты!")
-	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	match state:
