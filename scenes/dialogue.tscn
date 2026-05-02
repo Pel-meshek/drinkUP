@@ -6,9 +6,10 @@
 [ext_resource type="FontFile" uid="uid://mca6jyx15p1q" path="res://assets/Font/RobotoSlab-Regular.ttf" id="3_led2e"]
 
 [node name="Dialogue" type="CanvasLayer" unique_id=198509155]
-scale = Vector2(0.6, 0.6)
-transform = Transform2D(0.6, 0, 0, 0.6, 0, 0)
+scale = Vector2(0.7, 0.7)
+transform = Transform2D(0.7, 0, 0, 0.7, 0, 0)
 script = ExtResource("1_3n4vj")
+text_speed = 0.03
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=257934461]
 offset_left = 3.333333
@@ -23,11 +24,11 @@ patch_margin_bottom = 4
 
 [node name="Name" type="RichTextLabel" parent="NinePatchRect" unique_id=68285725]
 layout_mode = 0
-offset_left = 131.0
-offset_top = 299.0
-offset_right = 491.0
-offset_bottom = 417.0
-scale = Vector2(0.5, 0.5)
+offset_left = 96.66666
+offset_top = 270.9524
+offset_right = 468.09518
+offset_bottom = 417.52386
+scale = Vector2(0.7, 0.7)
 theme_override_fonts/normal_font = ExtResource("3_led2e")
 theme_override_font_sizes/normal_font_size = 60
 text = "Белочка"
@@ -35,23 +36,15 @@ text = "Белочка"
 [node name="Message" type="RichTextLabel" parent="NinePatchRect" unique_id=1078892700]
 layout_mode = 0
 offset_left = 296.0
-offset_top = 115.99999
-offset_right = 1823.4998
-offset_bottom = 635.9999
-scale = Vector2(0.4, 0.4)
+offset_top = 102.38095
+offset_right = 1301.8728
+offset_bottom = 523.80945
+scale = Vector2(0.6, 0.6)
 theme_override_fonts/normal_font = ExtResource("3_led2e")
-theme_override_fonts/bold_font = ExtResource("3_led2e")
-theme_override_fonts/bold_italics_font = ExtResource("3_led2e")
-theme_override_fonts/italics_font = ExtResource("3_led2e")
-theme_override_fonts/mono_font = ExtResource("3_led2e")
 theme_override_font_sizes/normal_font_size = 60
-theme_override_font_sizes/bold_font_size = 60
-theme_override_font_sizes/bold_italics_font_size = 60
-theme_override_font_sizes/italics_font_size = 60
-theme_override_font_sizes/mono_font_size = 60
 bbcode_enabled = true
 
 [node name="БелкаДляТекста" type="Sprite2D" parent="NinePatchRect" unique_id=2027634607]
-position = Vector2(183.5, 190.00002)
-scale = Vector2(6.1562505, 5.562499)
+position = Vector2(171.7024, 171.88094)
+scale = Vector2(6.649554, 5.950891)
 texture = ExtResource("3_fyky8")

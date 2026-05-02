@@ -1,60 +1,29 @@
 extends CanvasLayer
 
-@export var text_speed: float = 0.05
-var is_typing: bool = false
 var current_index: int = 0
+var can_change: bool = true
+var is_typing: bool = false
+@export var text_speed: float = 0.05
 @export_file("*.json") var dialog_file: String = "res://assets/Dialog.json"
 var dialog: Array = []
 
-func play():
+func _ready() -> void:
 	dialog = load_dialog()
-	if dialog == null or dialog.is_empty():
+	if dialog.is_empty():
 		push_error("Диалоги не загружены!")
 		return
-	
-	$NinePatchRect/Name.text = dialog[current_index]["name"]
-	type_text(dialog[current_index]["text"])
+	update_dialog(0)
 
 func load_dialog():
 	if FileAccess.file_exists(dialog_file):
 		var file = FileAccess.open(dialog_file, FileAccess.READ)
 		var content = file.get_as_text()
 		return JSON.parse_string(content)
-	return null
+	return []
 
-func _ready() -> void:
-	play()
-
-func _input(event: InputEvent):
-	if event is InputEventKey and event.keycode == KEY_SPACE and not event.echo:
-		next_dialog()
-
-<<<<<<< Updated upstream
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if not stop:
-		type_text("бухай мразь")
-	if Input.is_action_just_pressed("skip"):
-		queue_free()
-=======
-func next_dialog():
-	if is_typing:
-		# Если текст печатается - показать ВЕСЬ текст и остановить печать
-		complete_text()
-	else:
-		# Переход к следующему диалогу
-		current_index += 1
-		if current_index < dialog.size():
-			$NinePatchRect/Name.text = dialog[current_index]["name"]
-			type_text(dialog[current_index]["text"])
-		else:
-			queue_free()
-
-func complete_text():
-	# Останавливаем печать и показываем полный текст
-	is_typing = false
-	$NinePatchRect/Message.text = dialog[current_index]["text"]  # Полный текст из JSON
->>>>>>> Stashed changes
+func update_dialog(index: int):
+	$NinePatchRect/Name.text = dialog[index]["name"]
+	type_text(dialog[index]["text"])
 
 func type_text(new_text: String):
 	if is_typing:
@@ -64,11 +33,35 @@ func type_text(new_text: String):
 	$NinePatchRect/Message.text = ""
 	
 	for char in new_text:
-		if not is_typing:  # Если нажали пробел во время печати
+		if not is_typing:
 			break
 		$NinePatchRect/Message.text += char
 		await get_tree().create_timer(text_speed).timeout
 	
-	# Если цикл завершился естественным путём (не прерван)
-	if is_typing:
-		is_typing = false
+	is_typing = false
+
+func _input(event: InputEvent):
+	if event is InputEventKey and event.keycode == KEY_SPACE and event.pressed and not event.echo:
+		if not can_change:
+			return
+		
+		can_change = false
+		
+		if is_typing:
+			# Если текст печатается - показать весь сразу
+			is_typing = false
+			$NinePatchRect/Message.text = dialog[current_index]["text"]
+			can_change = true
+		else:
+			# Переход к следующему диалогу
+			current_index += 1
+			if current_index < dialog.size():
+				update_dialog(current_index)
+			else:
+				queue_free()
+			
+			await get_tree().create_timer(0.1).timeout
+			can_change = true
+	
+	if event is InputEventKey and event.keycode == KEY_ESCAPE and event.pressed:
+		queue_free()
