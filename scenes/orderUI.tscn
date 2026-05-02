@@ -30,6 +30,7 @@ theme_override_font_sizes/font_size = 50
 text = "Заказы"
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1677441654]
+visible = false
 layout_mode = 0
 offset_left = 1125.0
 offset_top = 782.0

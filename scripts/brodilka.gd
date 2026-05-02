@@ -5,6 +5,7 @@ enum state { empty, brod, ready}
 var current_state: state = state.empty
 var is_active = false
 var brew_timer: float = 0.0
+var pivo = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -25,15 +26,17 @@ func handle_interaction():
 	
 	match current_state:
 		state.empty:
-			if held_item == "Пиво":
+			if held_item == "Светлый Лагер" or held_item == "Летний блонд" or held_item == "Мюнхенский Дункель" or held_item == "Эмбер":
 				current_state = state.brod
+				pivo = held_item
 				Global.drop_item()
 				brew_timer = 0.0
 				$skillchek.visible = true
 				$skillchek/AnimatedSprite2D.play("default")
 		state.ready:
 			if held_item == "":
-				Global.take_item("Готовое Пиво")
+				Global.take_item("Готовый " + pivo)
+				pivo = ""
 				current_state = state.empty
 	
 func finish():

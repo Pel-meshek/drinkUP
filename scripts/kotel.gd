@@ -11,6 +11,8 @@ enum State { EMPTY, HAS_MALT, COOKING, READY }
 var current_state: State = State.EMPTY
 var is_active: bool = false
 var brew_timer: float = 0.0
+var solod = ""
+var hmel = ""
 
 func _ready():
 	update_visuals()
@@ -43,12 +45,14 @@ func handle_interaction():
 		State.EMPTY:
 			if held_item == "pilsner rez" or held_item == "munhen rez" or held_item == "caramel rez":
 				current_state = State.HAS_MALT
+				solod = held_item
 				Global.drop_item()
 				update_visuals()
 				
 		State.HAS_MALT:
 			if held_item == "magnum" or held_item == "cascad":
 				start_brewing()
+				hmel = held_item
 				Global.drop_item()
 			elif held_item == "":
 				print("Нужен хмель!")
@@ -75,8 +79,10 @@ func finish_brewing():
 	print("Пиво готово!")
 
 func take_beer():
-	Global.take_item("Пиво")
+	Global.take_item(recept(solod,hmel))
 	current_state = State.EMPTY
+	solod = ""
+	hmel = ""
 	update_visuals()
 
 func update_visuals():
@@ -90,6 +96,18 @@ func update_visuals():
 			sprite.play("malt")
 		State.READY:
 			sprite.play("solod")
+
+func recept(solod,hmel):
+	if solod == "pilsner rez" and hmel == "magnum":
+		return "Светлый Лагер"
+	elif solod == "pilsner rez" and hmel == "cascad":
+		return "Летний блонд"
+	elif solod == "munhen rez" and hmel == "magnum":
+		return "Мюнхенский Дункель"
+	elif solod == "caramel rez" and hmel == "cascad":
+		return "Эмбер"
+	else:
+		return "Бурмалда"
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
