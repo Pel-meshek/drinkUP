@@ -14,12 +14,14 @@ func _ready() -> void:
 func _input(event):
 	if state == inactive:
 		return
+	if state == caramel and event.is_action_pressed("interact"):
+		$"../../Player".solod_state("caramel")
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	match state:
 		inactive:
-			pass
+			inactive_state()
 		pilsner:
 			pilsner_state()
 		munhen:
@@ -36,31 +38,24 @@ func munhen_state():
 func caramel_state():
 	$Label.text = "Карамельный"
 
-func _on_pilsner_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
+func inactive_state():
+	$Label.text = "Солоды"
+
+
+func _on_pilsner_area_entered(area: Area2D) -> void:
+	if area.name == "hitbox":
 		state = pilsner
 
-
-func _on_munhen_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
+func _on_munhen_area_entered(area: Area2D) -> void:
+	if area.name == "hitbox":
 		state = munhen
 
 
-func _on_caramel_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
+func _on_caramel_area_entered(area: Area2D) -> void:
+	if area.name == "hitbox":
 		state = caramel
 
 
-func _on_pilsner_body_exited(body: Node2D) -> void:
-	if body.name == "Player":
-		state = inactive
-
-
-func _on_munhen_body_exited(body: Node2D) -> void:
-	if body.name == "Player":
-		state = inactive
-
-
-func _on_caramel_body_exited(body: Node2D) -> void:
-	if body.name == "Player":
+func _on_area_2d_area_exited(area: Area2D) -> void:
+	if area.name == "hitbox":
 		state = inactive

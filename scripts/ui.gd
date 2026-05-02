@@ -19,3 +19,6 @@ func _process(delta: float) -> void:
 		$"Score HUD".play("4")
 	if score == -2:
 		$"Score HUD".play("5")
+
+func arm(item):
+	$Label.text = "В руках: " + "caramel"

@@ -20,7 +20,7 @@ func _physics_process(delta: float) -> void:
 		EMPTY:
 			pass
 		SOLOD:
-			pass
+			solod_state("")
 		SOLODREZ:
 			pass
 		HMEL:
@@ -52,3 +52,6 @@ func _physics_process(delta: float) -> void:
 		is_playing = true
 	move_and_slide()
 	
+func solod_state(solod):
+	print(solod)
+	$"../Camera2D/UI".arm(solod)

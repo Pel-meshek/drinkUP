@@ -486,6 +486,9 @@ size = Vector2(31, 43)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qywv"]
 size = Vector2(97, 32)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rjp78"]
+size = Vector2(95, 42)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ahcgg"]
 size = Vector2(40, 31)
 
@@ -627,6 +630,12 @@ text = "Пильзнер"
 position = Vector2(271.5, 48)
 shape = SubResource("RectangleShape2D_4qywv")
 
+[node name="Area2D" type="Area2D" parent="varka/solods" unique_id=1401838526]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="varka/solods/Area2D" unique_id=1051210206]
+position = Vector2(271.5, 53)
+shape = SubResource("RectangleShape2D_rjp78")
+
 [node name="hmel" type="StaticBody2D" parent="varka" unique_id=1005736307]
 
 [node name="cascad" type="Area2D" parent="varka/hmel" unique_id=804866525]
@@ -665,9 +674,7 @@ follow_viewport_enabled = true
 [connection signal="body_exited" from="varka/kotel/Area2D" to="varka/kotel" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="varka/stol/Area2D" to="varka/stol" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="varka/stol/Area2D" to="varka/stol" method="_on_area_2d_body_exited"]
-[connection signal="body_entered" from="varka/solods/pilsner" to="varka/solods" method="_on_pilsner_body_entered"]
-[connection signal="body_exited" from="varka/solods/pilsner" to="varka/solods" method="_on_pilsner_body_exited"]
-[connection signal="body_entered" from="varka/solods/munhen" to="varka/solods" method="_on_munhen_body_entered"]
-[connection signal="body_exited" from="varka/solods/munhen" to="varka/solods" method="_on_munhen_body_exited"]
-[connection signal="body_entered" from="varka/solods/caramel" to="varka/solods" method="_on_caramel_body_entered"]
-[connection signal="body_exited" from="varka/solods/caramel" to="varka/solods" method="_on_caramel_body_exited"]
+[connection signal="area_entered" from="varka/solods/pilsner" to="varka/solods" method="_on_pilsner_area_entered"]
+[connection signal="area_entered" from="varka/solods/munhen" to="varka/solods" method="_on_munhen_area_entered"]
+[connection signal="area_entered" from="varka/solods/caramel" to="varka/solods" method="_on_caramel_area_entered"]
+[connection signal="area_exited" from="varka/solods/Area2D" to="varka/solods" method="_on_area_2d_area_exited"]

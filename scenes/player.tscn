@@ -59,6 +59,9 @@ animations = [{
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_y4r1p"]
 polygon = PackedVector2Array(-6, -12, -5, -14, 0, -14, 5, -8, 5, 8, 0, 14, -5, 14, -11, 3, -11, -3, -9, -6, -8, -6, -8, -10)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_d2wvv"]
+radius = 2.0
+
 [node name="Player" type="CharacterBody2D" unique_id=1896740672]
 script = ExtResource("1_onrkg")
 
@@ -81,3 +84,8 @@ volume_db = 4.861
 occluder = SubResource("OccluderPolygon2D_y4r1p")
 
 [node name="UI" parent="." unique_id=385884447 instance=ExtResource("11_d2wvv")]
+
+[node name="hitbox" type="Area2D" parent="." unique_id=1680953047]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=1998580019]
+shape = SubResource("CircleShape2D_d2wvv")
