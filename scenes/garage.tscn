@@ -481,13 +481,13 @@ animations = [{
 size = Vector2(29, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0juyn"]
-size = Vector2(31, 43)
+size = Vector2(31, 51.125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qywv"]
 size = Vector2(97, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rjp78"]
-size = Vector2(95, 42)
+size = Vector2(95, 47)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ahcgg"]
 size = Vector2(40, 31)
@@ -603,19 +603,19 @@ script = ExtResource("38_0juyn")
 [node name="pilsner" type="Area2D" parent="varka/solods" unique_id=826106598]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="varka/solods/pilsner" unique_id=1841451480]
-position = Vector2(304, 53)
+position = Vector2(304, 53.4375)
 shape = SubResource("RectangleShape2D_0juyn")
 
 [node name="munhen" type="Area2D" parent="varka/solods" unique_id=1722777062]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="varka/solods/munhen" unique_id=2013590762]
-position = Vector2(271.5, 53.5)
+position = Vector2(271.5, 54.875)
 shape = SubResource("RectangleShape2D_0juyn")
 
 [node name="caramel" type="Area2D" parent="varka/solods" unique_id=419213044]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="varka/solods/caramel" unique_id=397195449]
-position = Vector2(239, 53)
+position = Vector2(239, 55.25)
 shape = SubResource("RectangleShape2D_0juyn")
 
 [node name="Label" type="Label" parent="varka/solods" unique_id=1951061013]
@@ -633,7 +633,7 @@ shape = SubResource("RectangleShape2D_4qywv")
 [node name="Area2D" type="Area2D" parent="varka/solods" unique_id=1401838526]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="varka/solods/Area2D" unique_id=1051210206]
-position = Vector2(271.5, 53)
+position = Vector2(271.5, 55.5)
 shape = SubResource("RectangleShape2D_rjp78")
 
 [node name="hmel" type="StaticBody2D" parent="varka" unique_id=1005736307]
