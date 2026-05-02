@@ -3,8 +3,7 @@
 [ext_resource type="Script" uid="uid://cb5l2p2dey7go" path="res://scripts/dialogue.gd" id="1_3n4vj"]
 [ext_resource type="Texture2D" uid="uid://ck6canyjxa1pq" path="res://assets/ТЕКСТ.png" id="2_bfpow"]
 [ext_resource type="Texture2D" uid="uid://ca4t830igkk80" path="res://assets/БЕЛКА ДЛЯ ТЕКСТА.png" id="3_fyky8"]
-
-[sub_resource type="FontVariation" id="FontVariation_led2e"]
+[ext_resource type="FontFile" uid="uid://mca6jyx15p1q" path="res://assets/Font/RobotoSlab-Regular.ttf" id="3_led2e"]
 
 [node name="Dialogue" type="CanvasLayer" unique_id=198509155]
 script = ExtResource("1_3n4vj")
@@ -23,11 +22,13 @@ patch_margin_bottom = 4
 
 [node name="Name" type="RichTextLabel" parent="NinePatchRect" unique_id=68285725]
 layout_mode = 0
-offset_left = 41.0
-offset_top = 207.0
-offset_right = 128.0
-offset_bottom = 247.0
-theme_override_fonts/normal_font = SubResource("FontVariation_led2e")
+offset_left = 46.0
+offset_top = 208.0
+offset_right = 316.0
+offset_bottom = 294.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/normal_font = ExtResource("3_led2e")
+theme_override_font_sizes/normal_font_size = 60
 text = "Белочка"
 
 [node name="Message" type="RichTextLabel" parent="NinePatchRect" unique_id=1078892700]
@@ -36,6 +37,17 @@ offset_left = 224.0
 offset_top = 40.0
 offset_right = 618.0
 offset_bottom = 205.0
+scale = Vector2(0.4, 0.4)
+theme_override_fonts/normal_font = ExtResource("3_led2e")
+theme_override_fonts/bold_font = ExtResource("3_led2e")
+theme_override_fonts/bold_italics_font = ExtResource("3_led2e")
+theme_override_fonts/italics_font = ExtResource("3_led2e")
+theme_override_fonts/mono_font = ExtResource("3_led2e")
+theme_override_font_sizes/normal_font_size = 60
+theme_override_font_sizes/bold_font_size = 60
+theme_override_font_sizes/bold_italics_font_size = 60
+theme_override_font_sizes/italics_font_size = 60
+theme_override_font_sizes/mono_font_size = 60
 bbcode_enabled = true
 
 [node name="БелкаДляТекста" type="Sprite2D" parent="NinePatchRect" unique_id=2027634607]
