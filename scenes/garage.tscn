@@ -866,6 +866,9 @@ stream = ExtResource("12_4laxj")
 volume_db = -31.21
 
 [node name="Dialogue" parent="." unique_id=198509155 instance=ExtResource("22_sdyjj")]
+scale = Vector2(1, 1)
+transform = Transform2D(1, 0, 0, 1, 0, 0)
+text_speed = 0.05
 
 [node name="belka" parent="." unique_id=2000938191 instance=ExtResource("23_5080d")]
 position = Vector2(377, 143)
