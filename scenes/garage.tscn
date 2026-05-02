@@ -388,7 +388,10 @@ size = Vector2(29, 20)
 size = Vector2(31, 43)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ahcgg"]
-size = Vector2(95, 32)
+size = Vector2(40, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6jx5"]
+size = Vector2(40, 32)
 
 [node name="Garage" type="Node2D" unique_id=125230760]
 script = ExtResource("1_oyih7")
@@ -504,9 +507,19 @@ shape = SubResource("RectangleShape2D_0juyn")
 position = Vector2(239, 53)
 shape = SubResource("RectangleShape2D_0juyn")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="varka/solods" unique_id=1167703762]
-position = Vector2(271.5, 48)
+[node name="hmel" type="StaticBody2D" parent="varka" unique_id=1005736307]
+
+[node name="cascad" type="Area2D" parent="varka/hmel" unique_id=804866525]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="varka/hmel/cascad" unique_id=1826760904]
+position = Vector2(52, 208.5)
 shape = SubResource("RectangleShape2D_ahcgg")
+
+[node name="magnum" type="Area2D" parent="varka/hmel" unique_id=1987356703]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="varka/hmel/magnum" unique_id=759383370]
+position = Vector2(52, 176)
+shape = SubResource("RectangleShape2D_l6jx5")
 
 [node name="ГрустныйСаунд" type="AudioStreamPlayer" parent="." unique_id=801783800]
 stream = ExtResource("12_4laxj")
