@@ -1,47 +1,66 @@
 extends StaticBody2D
 
-var is_active_p = false
-var is_active_m = false
-var is_active_c = false
-
+enum {
+	inactive,
+	pilsner,
+	munhen,
+	caramel
+}
+var state = inactive
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 
 func _input(event):
-	if not is_active_c and not is_active_c and not is_active_c:
-		return 
+	if state == inactive:
+		return
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	match state:
+		inactive:
+			pass
+		pilsner:
+			pilsner_state()
+		munhen:
+			munhen_state()
+		caramel:
+			caramel_state()
 
+func pilsner_state():
+	$Label.text = "Пильзнер"
+
+func munhen_state():
+	$Label.text = "Мюнхенский"
+	
+func caramel_state():
+	$Label.text = "Карамельный"
 
 func _on_pilsner_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		is_active_p = true
+		state = pilsner
 
 
 func _on_munhen_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		is_active_m = true
+		state = munhen
 
 
 func _on_caramel_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		is_active_c = true
+		state = caramel
 
 
 func _on_pilsner_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
-		is_active_p = false
+		state = inactive
 
 
 func _on_munhen_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
-		is_active_m = false
+		state = inactive
 
 
 func _on_caramel_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
-		is_active_c = false
+		state = inactive

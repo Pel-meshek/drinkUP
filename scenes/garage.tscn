@@ -507,6 +507,14 @@ shape = SubResource("RectangleShape2D_0juyn")
 position = Vector2(239, 53)
 shape = SubResource("RectangleShape2D_0juyn")
 
+[node name="Label" type="Label" parent="varka/solods" unique_id=1951061013]
+offset_left = 244.0
+offset_top = 15.0
+offset_right = 294.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 10
+text = "Пильзнер"
+
 [node name="hmel" type="StaticBody2D" parent="varka" unique_id=1005736307]
 
 [node name="cascad" type="Area2D" parent="varka/hmel" unique_id=804866525]
