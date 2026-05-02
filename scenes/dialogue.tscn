@@ -12,10 +12,10 @@ script = ExtResource("1_3n4vj")
 text_speed = 0.03
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=257934461]
-offset_left = 3.333333
-offset_top = 3.3333282
-offset_right = 1020.3333
-offset_bottom = 450.3333
+offset_left = 1718.5715
+offset_top = -15.714284
+offset_right = 2735.5715
+offset_bottom = 431.2857
 texture = ExtResource("2_fyky8")
 patch_margin_left = 4
 patch_margin_top = 4
@@ -24,10 +24,10 @@ patch_margin_bottom = 4
 
 [node name="Name" type="RichTextLabel" parent="NinePatchRect" unique_id=68285725]
 layout_mode = 0
-offset_left = 96.66666
-offset_top = 270.9524
-offset_right = 468.09518
-offset_bottom = 417.52386
+offset_left = 98.09524
+offset_top = 303.80957
+offset_right = 469.52377
+offset_bottom = 450.38104
 scale = Vector2(0.7, 0.7)
 theme_override_fonts/normal_font = ExtResource("3_led2e")
 theme_override_font_sizes/normal_font_size = 60
@@ -45,6 +45,6 @@ theme_override_font_sizes/normal_font_size = 60
 bbcode_enabled = true
 
 [node name="БелкаДляТекста" type="Sprite2D" parent="NinePatchRect" unique_id=2027634607]
-position = Vector2(171.7024, 171.88094)
+position = Vector2(180.95238, 200.95238)
 scale = Vector2(6.649554, 5.950891)
 texture = ExtResource("3_fyky8")
