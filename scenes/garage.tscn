@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://bvcu31fhaeueo" path="res://assets/Котел/КОТЕЛ НИ С ЧЕМ.png" id="16_4sak7"]
 [ext_resource type="Texture2D" uid="uid://d30h8h2gn0dpc" path="res://assets/Пилнзер.png" id="16_ruylh"]
 [ext_resource type="Texture2D" uid="uid://ceifpkoiftcjh" path="res://assets/light_tele.png" id="19_q361v"]
+[ext_resource type="Texture2D" uid="uid://cxadlilha47g6" path="res://assets/КОТЕЛ НИ С ЧЕМ.png" id="22_kr3w1"]
 [ext_resource type="PackedScene" uid="uid://dacv2754hedak" path="res://scenes/dialogue.tscn" id="22_sdyjj"]
 [ext_resource type="PackedScene" uid="uid://k85ld780p7cg" path="res://scenes/belka.tscn" id="23_5080d"]
 [ext_resource type="PackedScene" uid="uid://dhucc0jp1i5vc" path="res://scenes/ui.tscn" id="25_4y4st"]
@@ -350,7 +351,15 @@ animations = [{
 "texture": ExtResource("11_0785v")
 }],
 "loop": true,
-"name": &"default",
+"name": &"malt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_spycl")
+}],
+"loop": true,
+"name": &"solod",
 "speed": 5.0
 }, {
 "frames": [{
@@ -362,8 +371,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_spycl"]
-radius = 8.258057
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_flowt"]
+size = Vector2(16.516132, 18.677967)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qfkxd"]
 size = Vector2(36, 40)
@@ -498,6 +507,9 @@ size = Vector2(40, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kr3w1"]
 size = Vector2(30, 64)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fma1v"]
+size = Vector2(41, 63)
+
 [node name="Garage" type="Node2D" unique_id=125230760]
 script = ExtResource("1_oyih7")
 
@@ -529,17 +541,19 @@ position = Vector2(244, 148)
 [node name="kotel" type="StaticBody2D" parent="varka" unique_id=1397662955]
 position = Vector2(-201, 0)
 script = ExtResource("6_nulr8")
+texture_empty = ExtResource("22_kr3w1")
+texture_with_malt = ExtResource("7_spycl")
+animation_cooking = "default"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="varka/kotel" unique_id=321625484]
 position = Vector2(379, 48)
 sprite_frames = SubResource("SpriteFrames_q361v")
-animation = &"пустой"
-autoplay = "пустой"
+animation = &"malt"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="varka/kotel" unique_id=89583594]
-position = Vector2(379, 48)
+position = Vector2(379, 46.78125)
 scale = Vector2(1.9375, 1.84375)
-shape = SubResource("CircleShape2D_spycl")
+shape = SubResource("RectangleShape2D_flowt")
 
 [node name="Area2D" type="Area2D" parent="varka/kotel" unique_id=1198677189]
 
@@ -653,6 +667,12 @@ shape = SubResource("RectangleShape2D_l6jx5")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="varka/hmel" unique_id=881708575]
 position = Vector2(47, 192)
 shape = SubResource("RectangleShape2D_kr3w1")
+
+[node name="Area2D" type="Area2D" parent="varka/hmel" unique_id=250566300]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="varka/hmel/Area2D" unique_id=1587296693]
+position = Vector2(51.5, 192.5)
+shape = SubResource("RectangleShape2D_fma1v")
 
 [node name="ГрустныйСаунд" type="AudioStreamPlayer" parent="." unique_id=801783800]
 stream = ExtResource("12_4laxj")

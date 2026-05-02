@@ -28,6 +28,8 @@ func _physics_process(delta: float) -> void:
 		PIVO:
 			pass
 	
+	if Input.is_action_just_pressed("drop"):
+		Global.drop_item()
 	# 1. Получаем направление ввода (-1 до 1)
 	var input_dir = Input.get_vector("left", "right", "up", "down")
 	
