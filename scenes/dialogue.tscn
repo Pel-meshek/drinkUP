@@ -1,20 +1,21 @@
 [gd_scene format=3 uid="uid://dacv2754hedak"]
 
 [ext_resource type="Script" uid="uid://cb5l2p2dey7go" path="res://scripts/dialogue.gd" id="1_3n4vj"]
-[ext_resource type="Texture2D" uid="uid://ck6canyjxa1pq" path="res://assets/ТЕКСТ.png" id="2_bfpow"]
+[ext_resource type="Texture2D" uid="uid://lt66v6elo6fj" path="res://assets/оконо.png" id="2_fyky8"]
 [ext_resource type="Texture2D" uid="uid://ca4t830igkk80" path="res://assets/БЕЛКА ДЛЯ ТЕКСТА.png" id="3_fyky8"]
 [ext_resource type="FontFile" uid="uid://mca6jyx15p1q" path="res://assets/Font/RobotoSlab-Regular.ttf" id="3_led2e"]
 
 [node name="Dialogue" type="CanvasLayer" unique_id=198509155]
+scale = Vector2(0.6, 0.6)
+transform = Transform2D(0.6, 0, 0, 0.6, 0, 0)
 script = ExtResource("1_3n4vj")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=257934461]
-offset_left = 2.0
-offset_top = 649.0
-offset_right = 746.0
-offset_bottom = 907.0
-texture = ExtResource("2_bfpow")
-region_rect = Rect2(2.596188, 7.4868107, 27.421059, 14.490068)
+offset_left = 3.333333
+offset_top = 3.3333282
+offset_right = 1020.3333
+offset_bottom = 450.3333
+texture = ExtResource("2_fyky8")
 patch_margin_left = 4
 patch_margin_top = 4
 patch_margin_right = 4
@@ -22,10 +23,10 @@ patch_margin_bottom = 4
 
 [node name="Name" type="RichTextLabel" parent="NinePatchRect" unique_id=68285725]
 layout_mode = 0
-offset_left = 46.0
-offset_top = 208.0
-offset_right = 316.0
-offset_bottom = 294.0
+offset_left = 131.0
+offset_top = 299.0
+offset_right = 491.0
+offset_bottom = 417.0
 scale = Vector2(0.5, 0.5)
 theme_override_fonts/normal_font = ExtResource("3_led2e")
 theme_override_font_sizes/normal_font_size = 60
@@ -33,10 +34,10 @@ text = "Белочка"
 
 [node name="Message" type="RichTextLabel" parent="NinePatchRect" unique_id=1078892700]
 layout_mode = 0
-offset_left = 224.0
-offset_top = 40.0
-offset_right = 618.0
-offset_bottom = 205.0
+offset_left = 296.0
+offset_top = 115.99999
+offset_right = 1823.4998
+offset_bottom = 635.9999
 scale = Vector2(0.4, 0.4)
 theme_override_fonts/normal_font = ExtResource("3_led2e")
 theme_override_fonts/bold_font = ExtResource("3_led2e")
@@ -51,6 +52,6 @@ theme_override_font_sizes/mono_font_size = 60
 bbcode_enabled = true
 
 [node name="БелкаДляТекста" type="Sprite2D" parent="NinePatchRect" unique_id=2027634607]
-position = Vector2(107, 108)
-scale = Vector2(4.75, 4.75)
+position = Vector2(183.5, 190.00002)
+scale = Vector2(6.1562505, 5.562499)
 texture = ExtResource("3_fyky8")
