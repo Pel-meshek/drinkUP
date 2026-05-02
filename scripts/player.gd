@@ -20,7 +20,7 @@ func _physics_process(delta: float) -> void:
 		EMPTY:
 			pass
 		SOLOD:
-			solod_state("")
+			pass
 		SOLODREZ:
 			pass
 		HMEL:
@@ -52,7 +52,3 @@ func _physics_process(delta: float) -> void:
 		is_playing = true
 	move_and_slide()
 	
-
-func solod_state(solod):
-	state = SOLOD
-	print(solod)
