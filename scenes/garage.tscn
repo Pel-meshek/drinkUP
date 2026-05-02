@@ -484,7 +484,11 @@ size = Vector2(29, 20)
 size = Vector2(31, 43)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qywv"]
+<<<<<<< Updated upstream
 size = Vector2(97, 32)
+=======
+size = Vector2(97, 42)
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ahcgg"]
 size = Vector2(40, 31)
@@ -623,8 +627,15 @@ offset_bottom = 38.0
 theme_override_font_sizes/font_size = 10
 text = "Пильзнер"
 
+<<<<<<< Updated upstream
 [node name="CollisionShape2D" type="CollisionShape2D" parent="varka/solods" unique_id=1441908790]
 position = Vector2(271.5, 48)
+=======
+[node name="Area2D" type="Area2D" parent="varka/solods" unique_id=1660000215]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="varka/solods/Area2D" unique_id=684992975]
+position = Vector2(271.5, 53)
+>>>>>>> Stashed changes
 shape = SubResource("RectangleShape2D_4qywv")
 
 [node name="hmel" type="StaticBody2D" parent="varka" unique_id=1005736307]
@@ -671,3 +682,4 @@ follow_viewport_enabled = true
 [connection signal="body_exited" from="varka/solods/munhen" to="varka/solods" method="_on_munhen_body_exited"]
 [connection signal="body_entered" from="varka/solods/caramel" to="varka/solods" method="_on_caramel_body_entered"]
 [connection signal="body_exited" from="varka/solods/caramel" to="varka/solods" method="_on_caramel_body_exited"]
+[connection signal="body_exited" from="varka/solods/Area2D" to="varka/solods" method="_on_area_2d_body_exited"]
