@@ -29,7 +29,5 @@ func arm(item):
 func _on_item_changed(new_item: String):
 	if new_item == "":
 		item_label.text = "Руки пусты"
-		item_label.modulate.a = 0.5 # Делаем тусклым
 	else:
 		item_label.text = "В руках: " + new_item
-		item_label.modulate.a = 1.0 # Яркий текст

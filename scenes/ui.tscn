@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bligev0vbxapw" path="res://assets/Индикатор/Пивность3.png" id="3_p7vwb"]
 [ext_resource type="Texture2D" uid="uid://8be2jaqd85r8" path="res://assets/Индикатор/Пивность4.png" id="4_ktti3"]
 [ext_resource type="Texture2D" uid="uid://dslon40t7vpdp" path="res://assets/Индикатор/Пивность5.png" id="5_cgfq5"]
+[ext_resource type="FontFile" uid="uid://mca6jyx15p1q" path="res://assets/Font/RobotoSlab-Regular.ttf" id="7_p7vwb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7dvkv"]
 animations = [{
@@ -64,4 +65,5 @@ offset_left = 7.0
 offset_top = 937.0
 offset_right = 331.0
 offset_bottom = 1064.0
+theme_override_fonts/font = ExtResource("7_p7vwb")
 theme_override_font_sizes/font_size = 60

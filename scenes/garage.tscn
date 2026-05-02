@@ -65,6 +65,7 @@
 [ext_resource type="Texture2D" uid="uid://fb7nni6qrogh" path="res://assets/Скиллчек/Скиллчек20.png" id="47_fm51g"]
 [ext_resource type="Texture2D" uid="uid://c0u6cq540hxfh" path="res://assets/Скиллчек/Скиллчек21.png" id="48_sebuw"]
 [ext_resource type="Texture2D" uid="uid://vrq45fl5bsgn" path="res://assets/Скиллчек/Скиллчек22.png" id="49_rfe51"]
+[ext_resource type="FontFile" uid="uid://mca6jyx15p1q" path="res://assets/Font/RobotoSlab-Regular.ttf" id="61_kr3w1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mpr7"]
 texture = ExtResource("3_lqxlc")
@@ -633,11 +634,14 @@ position = Vector2(239, 55.25)
 shape = SubResource("RectangleShape2D_0juyn")
 
 [node name="Label" type="Label" parent="varka/solods" unique_id=1951061013]
-offset_left = 244.0
-offset_top = 15.0
-offset_right = 294.0
-offset_bottom = 38.0
-theme_override_font_sizes/font_size = 10
+texture_filter = 2
+offset_left = 223.0
+offset_top = 13.0
+offset_right = 523.0
+offset_bottom = 93.0
+scale = Vector2(0.2, 0.2)
+theme_override_fonts/font = ExtResource("61_kr3w1")
+theme_override_font_sizes/font_size = 60
 text = "Пильзнер"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="varka/solods" unique_id=1441908790]
