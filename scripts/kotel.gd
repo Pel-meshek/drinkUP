@@ -34,7 +34,7 @@ func handle_interaction():
 
 	match current_state:
 		State.EMPTY:
-			if held_item == "pilsner" or held_item == "munhen" or held_item == "caramel":
+			if held_item == "pilsner rez" or held_item == "munhen rez" or held_item == "caramel rez":
 				current_state = State.HAS_MALT
 				Global.drop_item()
 				update_visuals()

@@ -1,37 +1,63 @@
 extends StaticBody2D
 
-@onready var timer_label = $StolTimerLabel
-var is_active = false
-var progress = 0.0
-const TIME = 5.0
-var is_playing_sound = false
+# Настройки
+@export var cut_time: float = 5.0
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	timer_label.visible = false
+# Узлы
+@onready var progress_bar = $StolTimerLabel/AnimatedSprite2D # Добавьте ProgressBar как дочерний узел
+@onready var audio = $AudioStreamPlayer2D # Звук нарезки (опционально)
 
+# Состояние
+var is_active: bool = false
+var cut_progress: float = 0.0
+var is_cutting: bool = false
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if not is_active or not Input.is_action_pressed("interact"):
-		progress = 0.0
-		timer_label.visible = false
-		if is_playing_sound:
-			$AudioStreamPlayer2D.stop()
-			is_playing_sound = false
+func _ready():
+	$StolTimerLabel.visible = false
+
+func _physics_process(delta):
+	if not is_active:
+		reset_process()
 		return
-	if not is_playing_sound:
-		$AudioStreamPlayer2D.play()
-		is_playing_sound = true
-	progress += delta
-	timer_label.visible = true
-	timer_label.text = "%.1f" % (TIME - progress)
+
+	# Проверка: в руках Солод?
+	var held_item = Global.held_item
+	if held_item != "caramel" and held_item != "pilsner" and held_item != "munhen":
+		reset_process()
+		return
+
+	# Логика удержания E
+	if Input.is_action_pressed("interact"):
+		if not is_cutting:
+			is_cutting = true
+			audio.play() # Запуск звука
+		
+		cut_progress += delta
+		$StolTimerLabel.visible = true
+		$StolTimerLabel/AnimatedSprite2D.play("default")
+		
+		# Завершение нарезки
+		if cut_progress >= cut_time:
+			finish_cutting(held_item)
+	else:
+		# Кнопка отпущена — сброс
+		reset_process()
+
+func finish_cutting(item):
+	Global.drop_item() # Убираем целый солод
+	Global.take_item(item + " rez") # Даем разрезанный
 	
-	if progress >= TIME:
-		$AudioStreamPlayer2D.stop()
-		is_playing_sound = false
-		timer_label.visible = false
-		progress = 0.0
+	reset_process()
+	print("Солод нарезан!")
+
+func reset_process():
+	is_cutting = false
+	cut_progress = 0.0
+	$StolTimerLabel.visible = false
+	if audio:
+		audio.stop()
+
+
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
@@ -41,3 +67,4 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
 		is_active = false
+		reset_process()
