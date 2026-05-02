@@ -34,14 +34,36 @@
 [ext_resource type="PackedScene" uid="uid://dacv2754hedak" path="res://scenes/dialogue.tscn" id="22_sdyjj"]
 [ext_resource type="PackedScene" uid="uid://k85ld780p7cg" path="res://scenes/belka.tscn" id="23_5080d"]
 [ext_resource type="PackedScene" uid="uid://dhucc0jp1i5vc" path="res://scenes/ui.tscn" id="25_4y4st"]
+[ext_resource type="Texture2D" uid="uid://ojcydakuu0u7" path="res://assets/Скиллчек/Скиллчек1.png" id="28_4qywv"]
+[ext_resource type="Texture2D" uid="uid://fb72p537r546" path="res://assets/Скиллчек/Скиллчек2.png" id="29_kr3w1"]
+[ext_resource type="Texture2D" uid="uid://div84mgeawcbt" path="res://assets/Скиллчек/Скиллчек3.png" id="30_rjp78"]
+[ext_resource type="Texture2D" uid="uid://csyhuyj6nq62r" path="res://assets/Скиллчек/Скиллчек4.png" id="31_flowt"]
+[ext_resource type="Texture2D" uid="uid://fmykxlsmfb1g" path="res://assets/Скиллчек/Скиллчек5.png" id="32_fma1v"]
+[ext_resource type="Texture2D" uid="uid://c5nut50hw2l2p" path="res://assets/Скиллчек/Скиллчек6.png" id="33_34iyq"]
+[ext_resource type="Texture2D" uid="uid://cwk1ejxyipuso" path="res://assets/Скиллчек/Скиллчек7.png" id="34_a3l7v"]
+[ext_resource type="Texture2D" uid="uid://kd3cc5b7vet1" path="res://assets/Скиллчек/Скиллчек8.png" id="35_5huaa"]
 [ext_resource type="Texture2D" uid="uid://222o7slh7qlp" path="res://assets/Дверь/Анимация двери2.png" id="35_v6vtq"]
 [ext_resource type="Texture2D" uid="uid://iyaqy2bvkkow" path="res://assets/Дверь/Анимация двери3.png" id="36_0juyn"]
+[ext_resource type="Texture2D" uid="uid://dlxuwo1q1ywir" path="res://assets/Скиллчек/Скиллчек9.png" id="36_ayv3f"]
 [ext_resource type="Texture2D" uid="uid://3wpfkxlis8ty" path="res://assets/Дверь/Анимация двери4.png" id="37_ahcgg"]
+[ext_resource type="Texture2D" uid="uid://bhx1opqe66nhf" path="res://assets/Скиллчек/Скиллчек10.png" id="37_j55nb"]
 [ext_resource type="Script" uid="uid://cr28fps778guc" path="res://scenes/solods.gd" id="38_0juyn"]
 [ext_resource type="Texture2D" uid="uid://tx16hsriplij" path="res://assets/Дверь/Анимация двери5.png" id="38_l6jx5"]
+[ext_resource type="Texture2D" uid="uid://bx1bdcehbnakr" path="res://assets/Скиллчек/Скиллчек11.png" id="38_mpx25"]
 [ext_resource type="Texture2D" uid="uid://ctq6e3lhiun7" path="res://assets/Дверь/Анимация двери6.png" id="39_3fq53"]
+[ext_resource type="Texture2D" uid="uid://ocqc5xtvnqlp" path="res://assets/Скиллчек/Скиллчек12.png" id="39_h1gvh"]
 [ext_resource type="Texture2D" uid="uid://cgy3g4xnlcgru" path="res://assets/Дверь/Анимация двери7.png" id="40_b27yd"]
+[ext_resource type="Texture2D" uid="uid://b40w3bwsvwmmw" path="res://assets/Скиллчек/Скиллчек13.png" id="40_hxkuf"]
+[ext_resource type="Texture2D" uid="uid://clync4rnm6y50" path="res://assets/Скиллчек/Скиллчек14.png" id="41_8i6x6"]
 [ext_resource type="Texture2D" uid="uid://bamil8pit8c78" path="res://assets/Дверь/Анимация двери8.png" id="41_lgefn"]
+[ext_resource type="Texture2D" uid="uid://dsfweyty5bfrw" path="res://assets/Скиллчек/Скиллчек15.png" id="42_86cw0"]
+[ext_resource type="Texture2D" uid="uid://l5t8huq3plqa" path="res://assets/Скиллчек/Скиллчек16.png" id="43_8pcvq"]
+[ext_resource type="Texture2D" uid="uid://nhfba0gyod6t" path="res://assets/Скиллчек/Скиллчек17.png" id="44_7dtcs"]
+[ext_resource type="Texture2D" uid="uid://cmcfhor1muur7" path="res://assets/Скиллчек/Скиллчек18.png" id="45_cbnv3"]
+[ext_resource type="Texture2D" uid="uid://7o6gp16jnb7p" path="res://assets/Скиллчек/Скиллчек19.png" id="46_dco2s"]
+[ext_resource type="Texture2D" uid="uid://fb7nni6qrogh" path="res://assets/Скиллчек/Скиллчек20.png" id="47_fm51g"]
+[ext_resource type="Texture2D" uid="uid://c0u6cq540hxfh" path="res://assets/Скиллчек/Скиллчек21.png" id="48_sebuw"]
+[ext_resource type="Texture2D" uid="uid://vrq45fl5bsgn" path="res://assets/Скиллчек/Скиллчек22.png" id="49_rfe51"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mpr7"]
 texture = ExtResource("3_lqxlc")
@@ -346,6 +368,80 @@ radius = 8.258057
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qfkxd"]
 size = Vector2(36, 40)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_fdhtn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_4qywv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_kr3w1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_rjp78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_flowt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_fma1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_34iyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_a3l7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_5huaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_ayv3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_j55nb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_mpx25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_h1gvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_hxkuf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_8i6x6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_86cw0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_8pcvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_7dtcs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_cbnv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_dco2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_fm51g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_sebuw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_rfe51")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.1
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p2t0x"]
 size = Vector2(70, 39)
 
@@ -447,8 +543,14 @@ offset_left = 369.0
 offset_top = 10.0
 offset_right = 409.0
 offset_bottom = 59.0
-text = "60
+text = "
 "
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Skillcheck" type="AnimatedSprite2D" parent="varka/kotel/TimerLabel" unique_id=673318681]
+position = Vector2(10, 5)
+sprite_frames = SubResource("SpriteFrames_fdhtn")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="varka/kotel" unique_id=1986010220]
 position = Vector2(378, 49)

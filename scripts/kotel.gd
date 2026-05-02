@@ -24,6 +24,7 @@ func start_timer():
 		$AnimatedSprite2D.play("default")
 		is_polnyi = true
 	$AudioStreamPlayer2D.play()
+	$TimerLabel/Skillcheck.play()
 	is_timer_active = true
 	is_active = false
 	timer_label.visible = true
