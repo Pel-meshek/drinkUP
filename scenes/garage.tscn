@@ -31,7 +31,6 @@
 [ext_resource type="Texture2D" uid="uid://bvcu31fhaeueo" path="res://assets/Котел/КОТЕЛ НИ С ЧЕМ.png" id="16_4sak7"]
 [ext_resource type="Texture2D" uid="uid://d30h8h2gn0dpc" path="res://assets/Пилнзер.png" id="16_ruylh"]
 [ext_resource type="Texture2D" uid="uid://ceifpkoiftcjh" path="res://assets/light_tele.png" id="19_q361v"]
-[ext_resource type="Texture2D" uid="uid://cxadlilha47g6" path="res://assets/КОТЕЛ НИ С ЧЕМ.png" id="22_kr3w1"]
 [ext_resource type="PackedScene" uid="uid://dacv2754hedak" path="res://scenes/dialogue.tscn" id="22_sdyjj"]
 [ext_resource type="PackedScene" uid="uid://k85ld780p7cg" path="res://scenes/belka.tscn" id="23_5080d"]
 [ext_resource type="PackedScene" uid="uid://dhucc0jp1i5vc" path="res://scenes/ui.tscn" id="25_4y4st"]
@@ -48,7 +47,7 @@
 [ext_resource type="Texture2D" uid="uid://dlxuwo1q1ywir" path="res://assets/Скиллчек/Скиллчек9.png" id="36_ayv3f"]
 [ext_resource type="Texture2D" uid="uid://3wpfkxlis8ty" path="res://assets/Дверь/Анимация двери4.png" id="37_ahcgg"]
 [ext_resource type="Texture2D" uid="uid://bhx1opqe66nhf" path="res://assets/Скиллчек/Скиллчек10.png" id="37_j55nb"]
-[ext_resource type="Script" uid="uid://cr28fps778guc" path="res://scenes/solods.gd" id="38_0juyn"]
+[ext_resource type="Script" uid="uid://cr28fps778guc" path="res://scripts/solods.gd" id="38_0juyn"]
 [ext_resource type="Texture2D" uid="uid://tx16hsriplij" path="res://assets/Дверь/Анимация двери5.png" id="38_l6jx5"]
 [ext_resource type="Texture2D" uid="uid://bx1bdcehbnakr" path="res://assets/Скиллчек/Скиллчек11.png" id="38_mpx25"]
 [ext_resource type="Texture2D" uid="uid://ctq6e3lhiun7" path="res://assets/Дверь/Анимация двери6.png" id="39_3fq53"]
@@ -66,6 +65,8 @@
 [ext_resource type="Texture2D" uid="uid://c0u6cq540hxfh" path="res://assets/Скиллчек/Скиллчек21.png" id="48_sebuw"]
 [ext_resource type="Texture2D" uid="uid://vrq45fl5bsgn" path="res://assets/Скиллчек/Скиллчек22.png" id="49_rfe51"]
 [ext_resource type="FontFile" uid="uid://mca6jyx15p1q" path="res://assets/Font/RobotoSlab-Regular.ttf" id="61_kr3w1"]
+[ext_resource type="Script" uid="uid://cyx6lu76448hd" path="res://scripts/hmel.gd" id="63_flowt"]
+[ext_resource type="Script" uid="uid://siscuwkux20q" path="res://scripts/brodilka.gd" id="63_fma1v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mpr7"]
 texture = ExtResource("3_lqxlc")
@@ -447,9 +448,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("49_rfe51")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
-"speed": 2.1
+"speed": 1.75
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p2t0x"]
@@ -500,16 +501,93 @@ size = Vector2(97, 32)
 size = Vector2(95, 47)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ahcgg"]
-size = Vector2(40, 31)
+size = Vector2(49, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l6jx5"]
-size = Vector2(40, 32)
+size = Vector2(49, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kr3w1"]
 size = Vector2(30, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fma1v"]
-size = Vector2(41, 63)
+size = Vector2(50, 63)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_34iyq"]
+size = Vector2(56, 28.75)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a3l7v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_4qywv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_kr3w1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_rjp78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_flowt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_fma1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_34iyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_a3l7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_5huaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_ayv3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_j55nb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_mpx25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_h1gvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_hxkuf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_8i6x6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_86cw0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_8pcvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_7dtcs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_cbnv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_dco2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_fm51g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_sebuw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_rfe51")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.4
+}]
 
 [node name="Garage" type="Node2D" unique_id=125230760]
 script = ExtResource("1_oyih7")
@@ -542,9 +620,6 @@ position = Vector2(244, 148)
 [node name="kotel" type="StaticBody2D" parent="varka" unique_id=1397662955]
 position = Vector2(-201, 0)
 script = ExtResource("6_nulr8")
-texture_empty = ExtResource("22_kr3w1")
-texture_with_malt = ExtResource("7_spycl")
-animation_cooking = "default"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="varka/kotel" unique_id=321625484]
 position = Vector2(379, 48)
@@ -655,17 +730,18 @@ position = Vector2(271.5, 55.5)
 shape = SubResource("RectangleShape2D_rjp78")
 
 [node name="hmel" type="StaticBody2D" parent="varka" unique_id=1005736307]
+script = ExtResource("63_flowt")
 
 [node name="cascad" type="Area2D" parent="varka/hmel" unique_id=804866525]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="varka/hmel/cascad" unique_id=1826760904]
-position = Vector2(52, 208.5)
+position = Vector2(56.5, 208.5)
 shape = SubResource("RectangleShape2D_ahcgg")
 
 [node name="magnum" type="Area2D" parent="varka/hmel" unique_id=1987356703]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="varka/hmel/magnum" unique_id=759383370]
-position = Vector2(52, 176)
+position = Vector2(56.5, 176)
 shape = SubResource("RectangleShape2D_l6jx5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="varka/hmel" unique_id=881708575]
@@ -675,8 +751,37 @@ shape = SubResource("RectangleShape2D_kr3w1")
 [node name="Area2D" type="Area2D" parent="varka/hmel" unique_id=250566300]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="varka/hmel/Area2D" unique_id=1587296693]
-position = Vector2(51.5, 192.5)
+position = Vector2(56, 192.5)
 shape = SubResource("RectangleShape2D_fma1v")
+
+[node name="Label" type="Label" parent="varka/hmel" unique_id=1623483705]
+texture_filter = 2
+offset_left = 24.0
+offset_top = 141.0
+offset_right = 324.0
+offset_bottom = 221.0
+scale = Vector2(0.2, 0.2)
+theme_override_fonts/font = ExtResource("61_kr3w1")
+theme_override_font_sizes/font_size = 60
+text = "Пильзнер"
+
+[node name="brodilka" type="StaticBody2D" parent="varka" unique_id=1886699468]
+script = ExtResource("63_fma1v")
+
+[node name="Area2D" type="Area2D" parent="varka/brodilka" unique_id=137637308]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="varka/brodilka/Area2D" unique_id=104726197]
+position = Vector2(60, 127.625)
+shape = SubResource("RectangleShape2D_34iyq")
+
+[node name="skillchek" type="Label" parent="varka/brodilka" unique_id=1102377579]
+offset_left = 16.0
+offset_top = 127.0
+offset_right = 56.0
+offset_bottom = 150.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="varka/brodilka/skillchek" unique_id=579549828]
+sprite_frames = SubResource("SpriteFrames_a3l7v")
 
 [node name="ГрустныйСаунд" type="AudioStreamPlayer" parent="." unique_id=801783800]
 stream = ExtResource("12_4laxj")
@@ -702,3 +807,8 @@ follow_viewport_enabled = true
 [connection signal="area_entered" from="varka/solods/munhen" to="varka/solods" method="_on_munhen_area_entered"]
 [connection signal="area_entered" from="varka/solods/caramel" to="varka/solods" method="_on_caramel_area_entered"]
 [connection signal="area_exited" from="varka/solods/Area2D" to="varka/solods" method="_on_area_2d_area_exited"]
+[connection signal="area_entered" from="varka/hmel/cascad" to="varka/hmel" method="_on_cascad_area_entered"]
+[connection signal="area_entered" from="varka/hmel/magnum" to="varka/hmel" method="_on_magnum_area_entered"]
+[connection signal="area_exited" from="varka/hmel/Area2D" to="varka/hmel" method="_on_area_2d_area_exited"]
+[connection signal="area_entered" from="varka/brodilka/Area2D" to="varka/brodilka" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="varka/brodilka/Area2D" to="varka/brodilka" method="_on_area_2d_area_exited"]

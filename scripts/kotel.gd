@@ -1,72 +1,88 @@
 extends StaticBody2D
 
-# Ссылки на узлы
-@onready var sprite = $AnimatedSprite2D# Или $AnimatedSprite2D
-@onready var audio = $AudioStreamPlayer
+@onready var sprite = $AnimatedSprite2D # Или AnimatedSprite2D
+@onready var audio = $AudioStreamPlayer2D
 
-# Настройки внешнего вида (назначьте в инспекторе)
-@export var texture_empty: Texture2D
-@export var texture_with_malt: Texture2D # Вид с солодом
-@export var animation_cooking: String = "boiling" # Имя анимации варки (если AnimatedSprite2D)
+# Настройки
+@export var brew_duration: float = 12 # Время варки
 
 # Состояние
-var has_malt: bool = false
-var is_cooking: bool = false
+enum State { EMPTY, HAS_MALT, COOKING, READY }
+var current_state: State = State.EMPTY
 var is_active: bool = false
+var brew_timer: float = 0.0
 
 func _ready():
-	sprite.play("пустой")
+	update_visuals()
+	$TimerLabel/Skillcheck.visible = false
 
 func _physics_process(delta):
+	# Таймер варки
+	if current_state == State.COOKING:
+		brew_timer += delta
+		$TimerLabel/Skillcheck.play("default")
+		
+		if brew_timer >= brew_duration:
+			finish_brewing()
+
+	# Взаимодействие
 	if is_active and Input.is_action_just_pressed("interact"):
 		handle_interaction()
-	if is_active and Input.is_action_just_pressed("drop"):
-		reset_cauldron()
 
 func handle_interaction():
-	var item = Global.held_item
-	
-	# 1. Если руки пусты — ничего не делаем (или можно выбрасывать содержимое)
-	if item == "":
-		return
+	var held_item = Global.held_item
 
-	# 2. Логика добавления ингредиентов
-	if not has_malt and not is_cooking:
-		if item == "caramel" or item == "pilsner" or item == "munhen":
-			add_malt()
-			Global.drop_item() # Убираем предмет из рук
-			
-	elif has_malt and not is_cooking:
-		if item == "Хмель":
-			start_brewing()
-			Global.drop_item()
-		else:
-			print("Сначала нужно добавить солод!")
-
-func add_malt():
-	has_malt = true
-	# Меняем вид
-	sprite.play("solod")
-	print("Добавлен солод")
+	match current_state:
+		State.EMPTY:
+			if held_item == "pilsner" or held_item == "munhen" or held_item == "caramel":
+				current_state = State.HAS_MALT
+				Global.drop_item()
+				update_visuals()
+				
+		State.HAS_MALT:
+			if held_item == "magnum" or held_item == "cascad":
+				start_brewing()
+				Global.drop_item()
+			elif held_item == "":
+				print("Нужен хмель!")
+				
+		State.READY:
+			if held_item == "":
+				take_beer()
+			else:
+				print("Освободите руки!")
 
 func start_brewing():
-	is_cooking = true
-	# Запуск анимации и звука
-	sprite.play("malt")
-	
+	current_state = State.COOKING
+	brew_timer = 0.0
 	audio.play()
-	print("Варка началась!")
-	
-	# Здесь можно запустить таймер на завершение варки через create_timer
+	$TimerLabel/Skillcheck.visible = true
+	update_visuals()
 
-func reset_cauldron():
-	if is_cooking:
+func finish_brewing():
+	if State.COOKING:
 		audio.stop()
-	# Функция для сброса (например, когда еда готова)
-	has_malt = false
-	is_cooking = false
-	sprite.play("пустой")
+	current_state = State.READY
+	$TimerLabel/Skillcheck.visible = false
+	update_visuals()
+	print("Пиво готово!")
 
+func take_beer():
+	Global.take_item("Пиво")
+	current_state = State.EMPTY
+	update_visuals()
+
+func update_visuals():
+	match current_state:
+		State.EMPTY:
+			sprite.play("пустой")
+		State.HAS_MALT:
+			sprite.play("solod")
+		State.COOKING:
+			# Можно менять текстуру или играть анимацию
+			sprite.play("malt")
+		State.READY:
+			sprite.play("solod")
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
