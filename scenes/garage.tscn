@@ -483,11 +483,17 @@ size = Vector2(29, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0juyn"]
 size = Vector2(31, 43)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4qywv"]
+size = Vector2(97, 32)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ahcgg"]
 size = Vector2(40, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l6jx5"]
 size = Vector2(40, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kr3w1"]
+size = Vector2(30, 64)
 
 [node name="Garage" type="Node2D" unique_id=125230760]
 script = ExtResource("1_oyih7")
@@ -617,6 +623,10 @@ offset_bottom = 38.0
 theme_override_font_sizes/font_size = 10
 text = "Пильзнер"
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="varka/solods" unique_id=1441908790]
+position = Vector2(271.5, 48)
+shape = SubResource("RectangleShape2D_4qywv")
+
 [node name="hmel" type="StaticBody2D" parent="varka" unique_id=1005736307]
 
 [node name="cascad" type="Area2D" parent="varka/hmel" unique_id=804866525]
@@ -631,9 +641,13 @@ shape = SubResource("RectangleShape2D_ahcgg")
 position = Vector2(52, 176)
 shape = SubResource("RectangleShape2D_l6jx5")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="varka/hmel" unique_id=881708575]
+position = Vector2(47, 192)
+shape = SubResource("RectangleShape2D_kr3w1")
+
 [node name="ГрустныйСаунд" type="AudioStreamPlayer" parent="." unique_id=801783800]
 stream = ExtResource("12_4laxj")
-volume_db = -31.57
+volume_db = -31.21
 
 [node name="Dialogue" parent="." unique_id=198509155 instance=ExtResource("22_sdyjj")]
 
