@@ -3,6 +3,7 @@ signal item_changed(item_name: String)
 
 var held_item: String = "Готовый Летний блонд"
 var day = 0
+var day_increased: bool = false
 
 func take_item(name: String):
 	held_item = name

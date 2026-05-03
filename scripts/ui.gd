@@ -29,16 +29,35 @@ func _on_day_timer_timeout():
 	update_time_display()
 	print("Тик таймера: ", time_left) # Проверка в консоли
 	
+
 	if time_left <= 0:
 		day_timer.stop()
 		print("День закончен!")
 		get_tree().reload_current_scene()
+
+	# Используем встроенный таймер Godot вместо цикла await
+	var timer = Timer.new()
+	add_child(timer)
+	timer.wait_time = 1.0
+	timer.autostart = true
+	timer.timeout.connect(func():
+		time_left -= 1
+		update_time_display()
+		
+		if time_left <= 0:
+			timer.stop()
+			timer.queue_free()
+			print("День закончен!")
+			get_tree().reload_current_scene() # Перезагрузка сцены
+	)
+
 
 func update_time_display():
 	if is_instance_valid(time_label):
 		time_label.text = str(time_left)
 
 func _process(delta: float):
+
 	if score_hud:
 		match score:
 			0: score_hud.play("1")
@@ -46,6 +65,16 @@ func _process(delta: float):
 			2: score_hud.play("3")
 			-1: score_hud.play("4")
 			-2: score_hud.play("5")
+
+	if Global.day == 1:
+		item_label.text = ""
+	# Оптимизация: используем match вместо кучи if
+	match score:
+		0: score_hud.play("1")
+		1: score_hud.play("2")
+		2: score_hud.play("3")
+		-1: score_hud.play("4")
+		-2: score_hud.play("5")
 
 func _on_item_changed(new_item: String):
 	if is_instance_valid(item_label):

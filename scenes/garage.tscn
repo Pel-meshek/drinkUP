@@ -47,7 +47,7 @@
 [ext_resource type="Texture2D" uid="uid://dlxuwo1q1ywir" path="res://assets/Скиллчек/Скиллчек9.png" id="36_ayv3f"]
 [ext_resource type="Texture2D" uid="uid://3wpfkxlis8ty" path="res://assets/Дверь/Анимация двери4.png" id="37_ahcgg"]
 [ext_resource type="Texture2D" uid="uid://bhx1opqe66nhf" path="res://assets/Скиллчек/Скиллчек10.png" id="37_j55nb"]
-[ext_resource type="Script" uid="uid://cr28fps778guc" path="res://scripts/solods.gd" id="38_0juyn"]
+[ext_resource type="Script" path="res://scripts/solods.gd" id="38_0juyn"]
 [ext_resource type="Texture2D" uid="uid://tx16hsriplij" path="res://assets/Дверь/Анимация двери5.png" id="38_l6jx5"]
 [ext_resource type="Texture2D" uid="uid://bx1bdcehbnakr" path="res://assets/Скиллчек/Скиллчек11.png" id="38_mpx25"]
 [ext_resource type="Texture2D" uid="uid://ctq6e3lhiun7" path="res://assets/Дверь/Анимация двери6.png" id="39_3fq53"]
@@ -70,6 +70,7 @@
 [ext_resource type="Script" uid="uid://siscuwkux20q" path="res://scripts/brodilka.gd" id="63_fma1v"]
 [ext_resource type="PackedScene" uid="uid://duvilworqtnmx" path="res://scenes/orderUI.tscn" id="68_fma1v"]
 [ext_resource type="PackedScene" uid="uid://bro0mfynjnqds" path="res://scenes/recepts.tscn" id="69_34iyq"]
+[ext_resource type="PackedScene" uid="uid://bjym3upfcl2om" path="res://scenes/choice.tscn" id="71_5huaa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mpr7"]
 texture = ExtResource("3_lqxlc")
@@ -1258,10 +1259,6 @@ zoom = Vector2(4, 4)
 
 [node name="UI" parent="Camera2D" unique_id=385884447 instance=ExtResource("25_4y4st")]
 
-[node name="Dialogue" parent="Camera2D" unique_id=198509155 instance=ExtResource("22_sdyjj")]
-visible = false
-text_speed = 0.05
-
 [node name="Control" parent="Camera2D" unique_id=1955629088 instance=ExtResource("68_fma1v")]
 visible = false
 offset_left = -112.00001
@@ -1271,11 +1268,17 @@ offset_bottom = 1035.3334
 scale = Vector2(0.3, 0.3)
 
 [node name="recepts" parent="Camera2D" unique_id=902733656 instance=ExtResource("69_34iyq")]
-visible = false
 offset_top = 2.0
 offset_right = 1900.0
 offset_bottom = 942.0
 scale = Vector2(0.25, 0.25)
+
+[node name="Choice" parent="Camera2D" unique_id=628410037 instance=ExtResource("71_5huaa")]
+visible = false
+
+[node name="Dialogue" parent="Camera2D" unique_id=198509155 instance=ExtResource("22_sdyjj")]
+visible = false
+text_speed = 0.05
 
 [connection signal="body_entered" from="varka/kotel/Area2D" to="varka/kotel" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="varka/kotel/Area2D" to="varka/kotel" method="_on_area_2d_body_exited"]
