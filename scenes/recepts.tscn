@@ -60,9 +60,11 @@ text = "Рецепты пива
 	Ингредиенты: Пильзнер + Карамельный + Cascade
 	Описание: Карамельная сладость с цитрусовой горечью.
 Венский лагер
-	Ингредиенты: Мюнхенский + Карамельный + Magnum
+	Ингредиенты: Карамельный + Magnum
 	Описание: Глубокое пиво с хлебной сладостью, карамельным и ореховым тоном.
-"
+Эль 
+	Ингредиенты: Мюнхенский + Cascade
+	Описание: Традиционный английский вид пива"
 
 [node name="Instrution" type="ScrollContainer" parent="PanelContainer/Control" unique_id=943266384]
 layout_mode = 0
@@ -76,7 +78,9 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="PanelContainer/Control/Instrution/VBoxContainer" unique_id=1681633957]
 layout_mode = 2
-text = "fgjdskgjngkjnsjgsngk"
+text = "E - действие
+F - выкинуть
+WASD - движение"
 
 [node name="TabBar" type="TabBar" parent="PanelContainer" unique_id=1173847177]
 layout_mode = 2

@@ -106,9 +106,10 @@ func recept(solod,hmel):
 		return "Мюнхенский Дункель"
 	elif solod == "caramel rez" and hmel == "cascad":
 		return "Эмбер"
-	else:
-		return "Бурмалда"
-
+	elif solod == "caramel rez" and hmel == "magnum":
+		return "Венский лагер"
+	elif solod == "munhen rez" and hmel == "cascad":
+		return "Эль"
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		is_active = true
