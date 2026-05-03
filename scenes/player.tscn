@@ -72,7 +72,7 @@ shape = SubResource("CapsuleShape2D_y4r1p")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1758560911]
 rotation = -1.5707964
 sprite_frames = SubResource("SpriteFrames_sweqy")
-animation = &"walk"
+animation = &"idle"
 autoplay = "idle"
 flip_v = true
 

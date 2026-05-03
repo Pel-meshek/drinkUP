@@ -24,7 +24,6 @@ func start_day_timer():
 	add_child(timer)
 	timer.wait_time = 1.0
 	timer.autostart = true
-	
 	timer.timeout.connect(func():
 		time_left -= 1
 		update_time_display()
@@ -41,6 +40,8 @@ func update_time_display():
 		time_label.text = str(time_left)
 
 func _process(delta: float):
+	if Global.day == 1:
+		item_label.text = ""
 	# Оптимизация: используем match вместо кучи if
 	match score:
 		0: score_hud.play("1")

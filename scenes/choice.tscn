@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bjym3upfcl2om"]
+
+[node name="Choice" type="CanvasLayer" unique_id=628410037]
+
+[node name="Пиво" type="Button" parent="." unique_id=1138822279]
+offset_left = 1098.0
+offset_top = 701.99994
+offset_right = 1149.0
+offset_bottom = 731.99994
+scale = Vector2(11.286608, 7.7059016)
+text = "Пиво
+"
+
+[node name="Кофе" type="Button" parent="." unique_id=2141778337]
+anchors_preset = -1
+anchor_left = 0.757
+anchor_top = 0.423
+anchor_right = 0.79
+anchor_bottom = 0.537
+offset_left = -1128.4401
+offset_top = 228.16
+offset_right = -1034.8
+offset_bottom = 181.03998
+scale = Vector2(2.947712, 3.3177195)
+text = "Лавандовый раф
+"
