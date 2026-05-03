@@ -22,12 +22,11 @@ func _process(delta: float) -> void:
 		timestop()
 
 func timestop():
-<<<<<<< Updated upstream
+
 	var ui = get_node("/root/Ui")
 	ui.start_cutscene()
-=======
+
 	$"ГрустныйСаунд".stop()
->>>>>>> Stashed changes
 	$belka.visible = true
 	$light.visible = true
 	$Player.global_position = Vector2(416, 142)

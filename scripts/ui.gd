@@ -1,13 +1,12 @@
 extends CanvasLayer
 
-<<<<<<< Updated upstream
+
 var score = 0
 var time_left: int = 60
 var cutscene: bool = false # Флаг катсцены
-=======
 
-var time_left: int = 120
->>>>>>> Stashed changes
+
+
 
 @onready var item_label = $Label
 @onready var time_label = $TimerLabel
@@ -77,8 +76,7 @@ func _process(delta: float):
 			-1: score_hud.play("4")
 			-2: score_hud.play("5")
 
-<<<<<<< Updated upstream
-=======
+
 	if Global.day == 1:
 		item_label.text = ""
 	# Оптимизация: используем match вместо кучи if
@@ -89,7 +87,6 @@ func _process(delta: float):
 		-1: score_hud.play("4")
 		-2: score_hud.play("5")
 
->>>>>>> Stashed changes
 func _on_item_changed(new_item: String):
 	if is_instance_valid(item_label):
 		if new_item == "":

@@ -1269,6 +1269,7 @@ offset_bottom = 1035.3334
 scale = Vector2(0.3, 0.3)
 
 [node name="recepts" parent="Camera2D" unique_id=902733656 instance=ExtResource("69_34iyq")]
+visible = false
 offset_top = 2.0
 offset_right = 1900.0
 offset_bottom = 942.0
