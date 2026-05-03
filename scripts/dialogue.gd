@@ -20,7 +20,7 @@ func load_dialog():
 	return []
 
 func update_dialog(index: int):
-	$NinePatchRect/Name.text = dialog[index]["name"]
+	$"."/NinePatchRect/Name.text = dialog[index]["name"]
 	type_text(dialog[index]["text"])
 
 func type_text(new_text: String):
@@ -48,8 +48,8 @@ func _input(event: InputEvent):
 			
 			# Проверка: если дошли до индекса 5 (шестой диалог)
 			if current_index == 5:
-				choice()
-				return
+				$"../Choice".visible = true
+				choice.choice()
 			
 			if current_index < dialog.size():
 				update_dialog(current_index)
@@ -58,7 +58,3 @@ func _input(event: InputEvent):
 	
 	if event is InputEventKey and event.keycode == KEY_ESCAPE and event.pressed:
 		queue_free()
-
-# Новая функция choice
-func choice():
-	$"../Choice".visible = true

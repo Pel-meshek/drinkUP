@@ -1247,7 +1247,8 @@ sprite_frames = SubResource("SpriteFrames_a3l7v")
 
 [node name="ГрустныйСаунд" type="AudioStreamPlayer" parent="." unique_id=801783800]
 stream = ExtResource("12_4laxj")
-volume_db = -31.21
+volume_db = -0.45
+autoplay = true
 
 [node name="belka" parent="." unique_id=2000938191 instance=ExtResource("23_5080d")]
 visible = false

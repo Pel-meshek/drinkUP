@@ -3,6 +3,8 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$Player/"Звук прихода белки".stop()
+	$"ГрустныйСаунд".play()
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,18 +18,22 @@ func _process(delta: float) -> void:
 		#$Camera2D/Dialogue.visible = true
 
 	if Global.day_increased:
+		$Player/"Звук прихода белки".play()
 		timestop()
 
 func timestop():
+<<<<<<< Updated upstream
 	var ui = get_node("/root/Ui")
 	ui.start_cutscene()
+=======
+	$"ГрустныйСаунд".stop()
+>>>>>>> Stashed changes
 	$belka.visible = true
 	$light.visible = true
 	$Player.global_position = Vector2(416, 142)
 	$Player.rotation_degrees = -90
 	$Player.speed = 0
 	$Player.rotation_speed = 0
-	$Player/AnimatedSprite2D.play("idle")
 	$Camera2D/recepts.visible = false
 	$Camera2D/UI.visible = false
 	$Camera2D/Dialogue.visible = true

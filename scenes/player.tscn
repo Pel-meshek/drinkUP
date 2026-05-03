@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cvctqokf48agk" path="res://assets/Man/МУЖИК ХОДИТ8.png" id="9_a8ls1"]
 [ext_resource type="AudioStream" uid="uid://bhfl73s42leof" path="res://Саунд/Хотьба по бетону.mp3" id="10_y4r1p"]
 [ext_resource type="PackedScene" uid="uid://dhucc0jp1i5vc" path="res://scenes/ui.tscn" id="11_d2wvv"]
+[ext_resource type="AudioStream" uid="uid://b5cjc12i4ypev" path="res://Саунд/Звук прихода белки.mp3" id="12_3v2ag"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y4r1p"]
 radius = 6.5
@@ -76,7 +77,7 @@ animation = &"idle"
 autoplay = "idle"
 flip_v = true
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=37286401]
+[node name="Ходьба" type="AudioStreamPlayer2D" parent="." unique_id=37286401]
 stream = ExtResource("10_y4r1p")
 volume_db = 4.861
 
@@ -89,3 +90,8 @@ occluder = SubResource("OccluderPolygon2D_y4r1p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=1998580019]
 shape = SubResource("CircleShape2D_d2wvv")
+
+[node name="Звук прихода белки" type="AudioStreamPlayer2D" parent="." unique_id=64681548]
+stream = ExtResource("12_3v2ag")
+volume_db = 1.807
+autoplay = true

@@ -17,7 +17,11 @@ config/features=PackedStringArray("4.6", "Mobile")
 [autoload]
 
 Global="*uid://lg6qbyj2qjx6"
+<<<<<<< Updated upstream
 Ui="*uid://dhucc0jp1i5vc"
+=======
+choice="*uid://cbcr3wc6q2tmy"
+>>>>>>> Stashed changes
 
 [display]
 
