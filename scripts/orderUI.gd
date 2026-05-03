@@ -13,7 +13,13 @@ var orders_data: Array = [
 func _process(delta: float) -> void:
 	if not day_increased and orders_data[0][1] and orders_data[1][1]:
 		Global.day += 1
-		day_increased = true 
+		orders_data = [
+		["Светлый Лагер", false],
+		["Эмбер", false],
+		]
+		render_orders()
+	
+
 func _ready():
 	# Подключаем кнопку открытия/закрытия
 	toggle_btn.pressed.connect(_on_toggle_pressed)

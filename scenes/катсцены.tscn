@@ -55,4 +55,4 @@ animations = [{
 position = Vector2(960, 539.99994)
 scale = Vector2(3.9999998, 3.7499998)
 sprite_frames = SubResource("SpriteFrames_skbsj")
-animation = &"ПИВО 2"
+animation = &"ДЕФ"
