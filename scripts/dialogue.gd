@@ -17,27 +17,19 @@ func _ready() -> void:
 		push_error("Ошибка: Не найдены узлы Name или Message внутри NinePatchRect!")
 		queue_free()
 		return
-	current_index = Global.index
+		
 	dialog_data = load_dialog()
 	
 	if dialog_data.is_empty():
 		print("Диалоги не загружены или файл пуст.")
 		queue_free()
 		return
-		
-	update_dialog(0)
-
-func load_dialog() -> Array:
-	if FileAccess.file_exists(dialog_file):
-		var file = FileAccess.open(dialog_file, FileAccess.READ)
-		var content = file.get_as_text()
-		var result = JSON.parse_string(content)
-		if result is Array:
-			return result
-		else:
-			push_error("Ошибка JSON: Ожидался массив, получено: " + str(result))
-			return []
-	return []
+	
+	# 1. Загружаем индекс из глобальной переменной
+	current_index = Global.index
+	
+	# 2. ВАЖНО: Передаем current_index, а не 0!
+	update_dialog(current_index) 
 
 func update_dialog(index: int):
 	# Защита от выхода за пределы массива
@@ -51,10 +43,23 @@ func update_dialog(index: int):
 	if current_line.has("name"):
 		name_label.text = current_line["name"]
 	else:
-		name_label.text = "" # Если имени нет, скрываем или оставляем пустым
+		name_label.text = "" 
 		
 	# Запускам печать текста
 	type_text(current_line["text"])
+
+func load_dialog() -> Array:
+	if FileAccess.file_exists(dialog_file):
+		var file = FileAccess.open(dialog_file, FileAccess.READ)
+		var content = file.get_as_text()
+		var result = JSON.parse_string(content)
+		if result is Array:
+			return result
+		else:
+			push_error("Ошибка JSON: Ожидался массив, получено: " + str(result))
+			return []
+	return []
+
 
 func type_text(new_text: String):
 	if is_typing:
@@ -89,8 +94,9 @@ func _input(event: InputEvent):
 			if current_index == 5: 
 				if is_instance_valid(choice_node):
 					choice_node.visible = true
+					Choice.is_choice = true
 					Global.day = 2
-					Global.index += Choice.choice()
+					print(Global.index)
 					queue_free()
 			
 			if current_index < dialog_data.size():

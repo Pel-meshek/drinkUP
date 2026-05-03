@@ -21,7 +21,7 @@ func _process(delta: float) -> void:
 func _ready():
 	# Подключаем кнопку открытия/закрытия
 	toggle_btn.pressed.connect(_on_toggle_pressed)
-	
+	#я засунул член в USB порт
 	if Global.day == 1:
 		orders_data = [
 		["Светлый Лагер", true],
@@ -30,7 +30,7 @@ func _ready():
 	]
 	elif Global.day == 2:
 		orders_data = [
-			["Мюнхенский дункeль", false],
+			["Мюнхенский дункeль", true],
 		["Эмбер", true],
 		["Венский Лагер", true]
 		]

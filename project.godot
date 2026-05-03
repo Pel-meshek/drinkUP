@@ -17,7 +17,6 @@ config/features=PackedStringArray("4.6", "Mobile")
 [autoload]
 
 Global="*uid://lg6qbyj2qjx6"
-Ui="*uid://dhucc0jp1i5vc"
 Choice="*uid://dvp0qg5agi50y"
 
 [display]
