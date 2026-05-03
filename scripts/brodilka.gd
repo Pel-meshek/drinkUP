@@ -26,7 +26,7 @@ func handle_interaction():
 	
 	match current_state:
 		state.empty:
-			if held_item == "Светлый Лагер" or held_item == "Летний блонд" or held_item == "Мюнхенский Дункель" or held_item == "Эмбер" or held_item == "Венский лагер" or held_item == "Эль":
+			if held_item == "Светлый Лагер" or held_item == "Летний блонд" or held_item == "Мюнхенский дункeль" or held_item == "Эмбер" or held_item == "Венский лагер" or held_item == "Эль":
 				current_state = state.brod
 				pivo = held_item
 				Global.drop_item()

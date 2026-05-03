@@ -26,11 +26,13 @@ func _ready():
 		orders_data = [
 		["Светлый Лагер", true],
 		["Летний блонд", false],
+		["Эль", true]
 	]
 	elif Global.day == 2:
 		orders_data = [
-			["Светлый Лагер", false],
-		["Летний блонд", false],
+			["Мюнхенский дункeль", false],
+		["Эмбер", true],
+		["Венский Лагер", true]
 		]
 	# Генерируем список при запуске
 	render_orders()

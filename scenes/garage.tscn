@@ -68,6 +68,7 @@
 [ext_resource type="FontFile" uid="uid://mca6jyx15p1q" path="res://assets/Font/RobotoSlab-Regular.ttf" id="61_kr3w1"]
 [ext_resource type="Script" uid="uid://cyx6lu76448hd" path="res://scripts/hmel.gd" id="63_flowt"]
 [ext_resource type="Script" uid="uid://siscuwkux20q" path="res://scripts/brodilka.gd" id="63_fma1v"]
+[ext_resource type="AudioStream" uid="uid://dos3ucfh6gg1m" path="res://Саунд/Основной трек.mp3" id="66_ayv3f"]
 [ext_resource type="PackedScene" uid="uid://duvilworqtnmx" path="res://scenes/orderUI.tscn" id="68_fma1v"]
 [ext_resource type="PackedScene" uid="uid://bro0mfynjnqds" path="res://scenes/recepts.tscn" id="69_34iyq"]
 [ext_resource type="PackedScene" uid="uid://bjym3upfcl2om" path="res://scenes/choice.tscn" id="71_5huaa"]
@@ -573,7 +574,7 @@ size = Vector2(29, 20)
 size = Vector2(56, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0juyn"]
-size = Vector2(31, 51.125)
+size = Vector2(29.5, 51.125)
 
 [sub_resource type="Image" id="Image_fma1v"]
 data = {
@@ -946,22 +947,22 @@ cache/0/10/0/glyphs/740/uv_rect = Rect2(77, 1, 11, 8)
 cache/0/10/0/glyphs/740/texture_idx = 0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qywv"]
-size = Vector2(97, 32)
+size = Vector2(96, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rjp78"]
-size = Vector2(95, 47)
+size = Vector2(94, 47)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ahcgg"]
 size = Vector2(49, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l6jx5"]
-size = Vector2(49, 32)
+size = Vector2(49, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kr3w1"]
 size = Vector2(30, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fma1v"]
-size = Vector2(50, 63)
+size = Vector2(49, 62)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_34iyq"]
 size = Vector2(56, 28.75)
@@ -1168,7 +1169,7 @@ shape = SubResource("RectangleShape2D_0juyn")
 [node name="caramel" type="Area2D" parent="varka/solods" unique_id=419213044]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="varka/solods/caramel" unique_id=397195449]
-position = Vector2(239, 55.25)
+position = Vector2(239.75, 55.25)
 shape = SubResource("RectangleShape2D_0juyn")
 
 [node name="Label" type="Label" parent="varka/solods" unique_id=1951061013]
@@ -1182,13 +1183,13 @@ theme_override_fonts/font = SubResource("FontFile_j55nb")
 theme_override_font_sizes/font_size = 60
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="varka/solods" unique_id=1441908790]
-position = Vector2(271.5, 48)
+position = Vector2(272, 48)
 shape = SubResource("RectangleShape2D_4qywv")
 
 [node name="Area2D" type="Area2D" parent="varka/solods" unique_id=1401838526]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="varka/solods/Area2D" unique_id=1051210206]
-position = Vector2(271.5, 55.5)
+position = Vector2(272, 55.5)
 shape = SubResource("RectangleShape2D_rjp78")
 
 [node name="hmel" type="StaticBody2D" parent="varka" unique_id=1005736307]
@@ -1203,7 +1204,7 @@ shape = SubResource("RectangleShape2D_ahcgg")
 [node name="magnum" type="Area2D" parent="varka/hmel" unique_id=1987356703]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="varka/hmel/magnum" unique_id=759383370]
-position = Vector2(56.5, 176)
+position = Vector2(56.5, 176.5)
 shape = SubResource("RectangleShape2D_l6jx5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="varka/hmel" unique_id=881708575]
@@ -1213,7 +1214,7 @@ shape = SubResource("RectangleShape2D_kr3w1")
 [node name="Area2D" type="Area2D" parent="varka/hmel" unique_id=250566300]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="varka/hmel/Area2D" unique_id=1587296693]
-position = Vector2(56, 192.5)
+position = Vector2(56.5, 193)
 shape = SubResource("RectangleShape2D_fma1v")
 
 [node name="Label" type="Label" parent="varka/hmel" unique_id=1623483705]
@@ -1250,6 +1251,13 @@ sprite_frames = SubResource("SpriteFrames_a3l7v")
 stream = ExtResource("12_4laxj")
 volume_db = -0.45
 autoplay = true
+parameters/looping = false
+
+[node name="Основной трек" type="AudioStreamPlayer2D" parent="." unique_id=1693752451]
+stream = ExtResource("66_ayv3f")
+volume_db = 3.617
+autoplay = true
+parameters/looping = true
 
 [node name="belka" parent="." unique_id=2000938191 instance=ExtResource("23_5080d")]
 visible = false

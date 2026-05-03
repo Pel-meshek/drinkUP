@@ -103,7 +103,7 @@ func recept(solod,hmel):
 	elif solod == "pilsner rez" and hmel == "cascad":
 		return "Летний блонд"
 	elif solod == "munhen rez" and hmel == "magnum":
-		return "Мюнхенский Дункель"
+		return "Мюнхенский дункeль"
 	elif solod == "caramel rez" and hmel == "cascad":
 		return "Эмбер"
 	elif solod == "caramel rez" and hmel == "magnum":

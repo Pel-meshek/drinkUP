@@ -5,6 +5,12 @@ extends Node2D
 func _ready() -> void:
 	$Player/"Звук прихода белки".stop()
 	$"ГрустныйСаунд".play()
+	if Global.score < 0:
+		$"ГрустныйСаунд".stop()
+		$"Основной трек".play()
+	else:
+		$"ГрустныйСаунд".play()
+		$"Основной трек".stop()
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -12,11 +18,10 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("escape"):
 		get_tree().quit()
 
-	if Global.day == 1:
-		$belka.visible = true
-		$light.visible = true
+	if Global.day == 1 or Global.day == 3:
+		$belka.visible = false
+		$light.visible = false
 		#$Camera2D/Dialogue.visible = true
-
 	if Global.day_increased:
 		$Player/"Звук прихода белки".play()
 		timestop()
@@ -27,6 +32,7 @@ func timestop():
 	ui.start_cutscene()
 
 	$"ГрустныйСаунд".stop()
+	$"Основной трек".stop()
 	$belka.visible = true
 	$light.visible = true
 	$Player.global_position = Vector2(416, 142)
