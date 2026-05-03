@@ -8,8 +8,14 @@ func _ready() -> void:
 	Global.item_changed.connect(_on_item_changed)
 	# Обновляем текст при старте (если что-то уже было)
 	_on_item_changed(Global.held_item)
+	day(1)
 
-
+func day(number):
+	for i in range(120,0,-1):
+		await get_tree().create_timer(1).timeout
+		if is_instance_valid($Timer):
+			$Timer.text = str(i-1)
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if score == 0:
