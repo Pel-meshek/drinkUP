@@ -34,7 +34,7 @@ func end_cutscene():
 	print("Катсцена закончена, таймер запущен")
 
 func start_new_day():
-	time_left = 120 # Или 120, как вам нужно
+	time_left = 240 # Или 120, как вам нужно
 	cutscene = false
 	update_time_display()
 	if day_timer:

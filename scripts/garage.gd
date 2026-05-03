@@ -18,18 +18,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("escape"):
 		get_tree().quit()
-
-	if Global.day == 1 or Global.day == 4:
-		$belka.visible = false
-		$light.visible = false
 		#$Camera2D/Dialogue.visible = true
-	if Global.day_increased :
+	if Global.day_increased:
 		$Player/"Звук прихода белки".play()
 		timestop()
 
 func timestop():
-
-
 	$"ГрустныйСаунд".stop()
 	$"Основной трек".stop()
 	$belka.visible = true
@@ -43,5 +37,22 @@ func timestop():
 	$Camera2D/UI.cutscene = true
 	$Camera2D/UI.update_time_display()
 	Global.day_increased = false
-	if is_instance_valid(dialogue):
-		dialogue.visible = true
+	if Global.day == 2:
+		if is_instance_valid(dialogue):
+			dialogue.visible = true
+	if Global.day == 3 and Global.choice1 == "pivo":
+		if is_instance_valid($Camera2D/Dialoguepivo) and is_instance_valid($Camera2D/Dialoguepivo):
+			$Camera2D/Dialoguepivo.visible = true
+			$Camera2D/Dialoguekofe.visible = false
+	if Global.day == 3 and Global.choice1 == "kofe":
+		if is_instance_valid($Camera2D/Dialoguepivo) and is_instance_valid($Camera2D/Dialoguekofe):
+			$Camera2D/Dialoguekofe.visible = true
+			$Camera2D/Dialoguepivo.visible = false
+	if Global.day >= 4 and Global.choice1 == "pivo":
+		if is_instance_valid($Camera2D/Dialoguepivo2) and is_instance_valid($Camera2D/Dialoguekofe2):
+			$Camera2D/Dialoguepivo2.visible = true
+			$Camera2D/Dialoguekofe2.visible = false
+	if Global.day >= 4 and Global.choice1 == "kofe":
+		if is_instance_valid($Camera2D/Dialoguepivo2) and is_instance_valid($Camera2D/Dialoguekofe2):
+			$Camera2D/Dialoguekofe2.visible = true
+			$Camera2D/Dialoguepivo2.visible = false

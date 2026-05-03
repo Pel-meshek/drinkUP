@@ -72,6 +72,9 @@
 [ext_resource type="PackedScene" uid="uid://duvilworqtnmx" path="res://scenes/orderUI.tscn" id="68_fma1v"]
 [ext_resource type="PackedScene" uid="uid://bro0mfynjnqds" path="res://scenes/recepts.tscn" id="69_34iyq"]
 [ext_resource type="PackedScene" uid="uid://bjym3upfcl2om" path="res://scenes/choice.tscn" id="71_5huaa"]
+[ext_resource type="PackedScene" uid="uid://cy76xn6nsbs0u" path="res://scenes/dialoguePIVO.tscn" id="73_j55nb"]
+[ext_resource type="Script" uid="uid://c8b44x8vx4jj3" path="res://scripts/dialogue_kofe.gd" id="73_mpx25"]
+[ext_resource type="Script" uid="uid://bjdsepxcupaxh" path="res://scripts/dialogue_kofe2.gd" id="74_h1gvh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mpr7"]
 texture = ExtResource("3_lqxlc")
@@ -1250,7 +1253,7 @@ sprite_frames = SubResource("SpriteFrames_a3l7v")
 [node name="ГрустныйСаунд" type="AudioStreamPlayer" parent="." unique_id=801783800]
 stream = ExtResource("12_4laxj")
 volume_db = -0.45
-parameters/looping = false
+parameters/looping = true
 
 [node name="Основной трек" type="AudioStreamPlayer2D" parent="." unique_id=1693752451]
 stream = ExtResource("66_ayv3f")
@@ -1258,7 +1261,6 @@ volume_db = 3.617
 parameters/looping = true
 
 [node name="belka" parent="." unique_id=2000938191 instance=ExtResource("23_5080d")]
-visible = false
 position = Vector2(377, 143)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1873902374]
@@ -1287,6 +1289,24 @@ visible = false
 [node name="Dialogue" parent="Camera2D" unique_id=198509155 instance=ExtResource("22_sdyjj")]
 visible = false
 text_speed = 0.05
+
+[node name="Dialoguekofe" parent="Camera2D" unique_id=446983830 instance=ExtResource("22_sdyjj")]
+visible = false
+script = ExtResource("73_mpx25")
+text_speed = 0.05
+dialog_file = "res://assets/DialogKOFE.json"
+
+[node name="Dialoguekofe2" parent="Camera2D" unique_id=532929335 instance=ExtResource("22_sdyjj")]
+visible = false
+script = ExtResource("74_h1gvh")
+text_speed = 0.05
+dialog_file = "res://assets/DialogKOFE2.json"
+
+[node name="Dialoguepivo" parent="Camera2D" unique_id=316000339 instance=ExtResource("73_j55nb")]
+visible = false
+
+[node name="Dialoguepivo2" parent="Camera2D" unique_id=1404824035 instance=ExtResource("73_j55nb")]
+visible = false
 
 [connection signal="body_entered" from="varka/kotel/Area2D" to="varka/kotel" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="varka/kotel/Area2D" to="varka/kotel" method="_on_area_2d_body_exited"]

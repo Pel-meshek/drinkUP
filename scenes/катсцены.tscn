@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://cbjphkh2kht1s"]
 
-[ext_resource type="Script" uid="uid://cuh8xfo6xbqnt" path="res://scripts/катсцены.gd" id="1_7htrt"]
+[ext_resource type="Script" uid="uid://1tuy5ib5uiii" path="res://scripts/катсцены.gd" id="1_7htrt"]
 [ext_resource type="Texture2D" uid="uid://dgmf4vjgkvrhv" path="res://assets/Катсцены/СКУФ ДЕФ.png" id="1_a12lq"]
 [ext_resource type="Texture2D" uid="uid://borfd76jmnytx" path="res://assets/Катсцены/УЖЕ НЕ СКУФ КОФЕ 1.png" id="2_7htrt"]
 [ext_resource type="Texture2D" uid="uid://cyh22snhby12e" path="res://assets/Катсцены/УЖЕ НЕ СКУФ КОФЕ2.png" id="3_p7c0k"]
 [ext_resource type="Texture2D" uid="uid://d02uvrmhv02d3" path="res://assets/Катсцены/СКУФ 1ПИВО.png" id="4_jfno0"]
 [ext_resource type="Texture2D" uid="uid://dnup4uwrgduy1" path="res://assets/Катсцены/СКУФ 2ПИВО.png" id="5_7woos"]
+[ext_resource type="AudioStream" uid="uid://dos2f4vcte0po" path="res://Саунд/Звук успокоения.mp3" id="7_p7c0k"]
+[ext_resource type="AudioStream" uid="uid://bl0vytsapcd7b" path="res://Саунд/Звук ужаса.mp3" id="8_jfno0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_skbsj"]
 animations = [{
@@ -58,3 +60,10 @@ position = Vector2(960, 539.99994)
 scale = Vector2(3.9999998, 3.7499998)
 sprite_frames = SubResource("SpriteFrames_skbsj")
 animation = &"1"
+
+[node name="ЗвукУспокоения" type="AudioStreamPlayer" parent="." unique_id=658386812]
+stream = ExtResource("7_p7c0k")
+autoplay = true
+
+[node name="ЗвукУжаса" type="AudioStreamPlayer" parent="." unique_id=586114819]
+stream = ExtResource("8_jfno0")

@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://cy76xn6nsbs0u"]
+
+[ext_resource type="Script" uid="uid://c30qmqchus6yk" path="res://scripts/dialogue_pivo.gd" id="1_86oqj"]
+[ext_resource type="Texture2D" uid="uid://lt66v6elo6fj" path="res://assets/оконо.png" id="2_dkchk"]
+[ext_resource type="FontFile" uid="uid://mca6jyx15p1q" path="res://assets/Font/RobotoSlab-Regular.ttf" id="3_5yqip"]
+[ext_resource type="Texture2D" uid="uid://ca4t830igkk80" path="res://assets/БЕЛКА ДЛЯ ТЕКСТА.png" id="4_ghr35"]
+
+[node name="Dialogue" type="CanvasLayer" unique_id=198509155]
+script = ExtResource("1_86oqj")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=257934461]
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 573.8572
+offset_bottom = 239.0
+texture = ExtResource("2_dkchk")
+region_rect = Rect2(0, 0, 64, 32)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRect" unique_id=68285725]
+layout_mode = 0
+offset_left = 65.71426
+offset_top = 158.57144
+offset_right = 328.97952
+offset_bottom = 262.2857
+scale = Vector2(0.7, 0.7)
+theme_override_fonts/normal_font = ExtResource("3_5yqip")
+theme_override_font_sizes/normal_font_size = 30
+text = "Белочка"
+
+[node name="Message" type="RichTextLabel" parent="NinePatchRect" unique_id=1078892700]
+layout_mode = 0
+offset_left = 195.71437
+offset_top = 52.857147
+offset_right = 746.95544
+offset_bottom = 283.8095
+scale = Vector2(0.6, 0.6)
+theme_override_fonts/normal_font = ExtResource("3_5yqip")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+
+[node name="БелкаДляТекста" type="Sprite2D" parent="NinePatchRect" unique_id=2027634607]
+position = Vector2(99.999985, 95.71428)
+scale = Vector2(2.7890654, 2.4960206)
+texture = ExtResource("4_ghr35")

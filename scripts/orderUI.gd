@@ -8,12 +8,8 @@ var orders_data: Array = []
 
 
 func _process(delta: float) -> void:
-	if not Global.day_increased and orders_data[0][1] and orders_data[1][1]:
+	if not Global.day_increased and orders_data[0][1] and orders_data[1][1] and orders_data[2][1]:
 		Global.day += 1
-		orders_data = [
-		["Светлый Лагер", false],
-		["Эмбер", false],
-		]
 		render_orders()
 		
 		Global.day_increased = true 
@@ -24,15 +20,21 @@ func _ready():
 	#я засунул член в USB порт
 	if Global.day == 1:
 		orders_data = [
-		["Светлый Лагер", true],
+		["Светлый Лагер", false],
 		["Летний блонд", false],
-		["Эль", true]
+		["Эль", false]
 	]
 	elif Global.day == 2:
 		orders_data = [
-			["Мюнхенский дункeль", true],
-		["Эмбер", true],
-		["Венский Лагер", true]
+			["Мюнхенский дункeль", false],
+		["Эмбер", false],
+		["Венский Лагер", false]
+		]
+	elif Global.day >= 4:
+		orders_data = [
+			["gggg",true],
+			["dddd",true],
+			["dddd",true]
 		]
 	# Генерируем список при запуске
 	render_orders()

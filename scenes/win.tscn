@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b7kt0wkace1m0"]
+
+[ext_resource type="Texture2D" uid="uid://cyh22snhby12e" path="res://assets/Катсцены/УЖЕ НЕ СКУФ КОФЕ2.png" id="1_r4oei"]
+[ext_resource type="FontFile" uid="uid://c5km6dgba1djk" path="res://assets/Font/RobotoSlab-Black.ttf" id="2_826fv"]
+
+[node name="Node2D" type="Node2D" unique_id=876888598]
+
+[node name="УжеНеСкуфКофе2" type="Sprite2D" parent="." unique_id=822312072]
+position = Vector2(947, 544)
+scale = Vector2(4.097222, 4.0972223)
+texture = ExtResource("1_r4oei")
+
+[node name="Label" type="Label" parent="." unique_id=1114888199]
+offset_left = 207.0
+offset_top = 48.0
+offset_right = 1648.0
+offset_bottom = 291.00012
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_826fv")
+theme_override_font_sizes/font_size = 90
+text = "ВЫ ПОБЕДИЛИ ЗАВИСИМОСТЬ
+Игра окончена"
+horizontal_alignment = 1

@@ -95,9 +95,9 @@ func _input(event: InputEvent):
 				if is_instance_valid(choice_node):
 					choice_node.visible = true
 					Choice.is_choice = true
-					Global.day = 2
+					Global.day_increased = false
 					print(Global.index)
-					queue_free()
+					choice_node.visible = true
 			
 			if current_index < dialog_data.size():
 				update_dialog(current_index)
