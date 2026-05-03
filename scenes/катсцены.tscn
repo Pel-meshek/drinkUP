@@ -19,7 +19,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_7woos")
+"texture": ExtResource("3_p7c0k")
 }],
 "loop": true,
 "name": &"-2",
@@ -43,7 +43,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_p7c0k")
+"texture": ExtResource("5_7woos")
 }],
 "loop": true,
 "name": &"2",
@@ -57,4 +57,4 @@ script = ExtResource("1_7htrt")
 position = Vector2(960, 539.99994)
 scale = Vector2(3.9999998, 3.7499998)
 sprite_frames = SubResource("SpriteFrames_skbsj")
-animation = &"0"
+animation = &"1"

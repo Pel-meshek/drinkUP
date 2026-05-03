@@ -10,11 +10,11 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	match Global.score:
-		0: score_hud.play("1")
-		1: score_hud.play("2")
-		2: score_hud.play("3")
-		-1: score_hud.play("4")
-		-2: score_hud.play("5")
+		0: score_hud.play("0")
+		1: score_hud.play("1")
+		2: score_hud.play("2")
+		-1: score_hud.play("-1")
+		-2: score_hud.play("-2")
 
 func wait_scene():
 	await get_tree().create_timer(5.0).timeout

@@ -17,7 +17,7 @@ func _ready() -> void:
 		push_error("Ошибка: Не найдены узлы Name или Message внутри NinePatchRect!")
 		queue_free()
 		return
-
+	current_index = Global.index
 	dialog_data = load_dialog()
 	
 	if dialog_data.is_empty():
@@ -88,12 +88,10 @@ func _input(event: InputEvent):
 			# Пример логики для выбора (раскомментируйте и настройте под себя)
 			if current_index == 5: 
 				if is_instance_valid(choice_node):
-					print(",ehvfklf")
 					choice_node.visible = true
-					Choice.choice() # Вызовите функцию выбора, если она есть
 					Global.day = 2
+					Global.index += Choice.choice()
 					queue_free()
-
 			
 			if current_index < dialog_data.size():
 				update_dialog(current_index)
