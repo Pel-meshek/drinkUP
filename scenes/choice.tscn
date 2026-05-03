@@ -1,12 +1,15 @@
 [gd_scene format=3 uid="uid://bjym3upfcl2om"]
 
+[ext_resource type="Script" uid="uid://cb5l2p2dey7go" path="res://scripts/dialogue.gd" id="1_ycxmd"]
+
 [node name="Choice" type="CanvasLayer" unique_id=628410037]
+script = ExtResource("1_ycxmd")
 
 [node name="Пиво" type="Button" parent="." unique_id=1138822279]
 offset_left = 1098.0
-offset_top = 701.99994
+offset_top = 667.0
 offset_right = 1149.0
-offset_bottom = 731.99994
+offset_bottom = 701.54193
 scale = Vector2(11.286608, 7.7059016)
 text = "Пиво
 "
@@ -24,3 +27,6 @@ offset_bottom = 181.03998
 scale = Vector2(2.947712, 3.3177195)
 text = "Лавандовый раф
 "
+
+[connection signal="pressed" from="Пиво" to="." method="_on_пиво_pressed"]
+[connection signal="pressed" from="Кофе" to="." method="_on_кофе_pressed"]

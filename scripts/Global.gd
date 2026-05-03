@@ -1,6 +1,6 @@
 extends Node
 signal item_changed(item_name: String)
-
+var score = 0
 var held_item: String = "Готовый Летний блонд"
 var day = 0
 var day_increased: bool = false

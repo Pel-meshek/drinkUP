@@ -42,14 +42,14 @@ func _physics_process(delta: float) -> void:
 		var target_angle = input_dir.angle()
 		$AnimatedSprite2D.play("walk")
 		if not is_playing:
-			$AudioStreamPlayer2D.play()
+			$"Ходьба".play()
 			is_playing = true
 		
 		# Плавный поворот к цели (lerp_angle корректно обрабатывает переход через 180/-180 градусов)
 		rotation = lerp_angle(rotation, target_angle, rotation_speed * delta)
 	else:
 		if is_playing:
-			$AudioStreamPlayer2D.stop()
+			$"Ходьба".stop()
 			is_playing = false
 		$AnimatedSprite2D.play("idle")
 

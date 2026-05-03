@@ -10,34 +10,10 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_a12lq")
-}],
-"loop": true,
-"name": &"ДЕФ",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": ExtResource("2_7htrt")
 }],
 "loop": true,
-"name": &"КОФЕ 1",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_p7c0k")
-}],
-"loop": true,
-"name": &"КОФЕ 2",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_jfno0")
-}],
-"loop": true,
-"name": &"ПИВО 1",
+"name": &"-1",
 "speed": 5.0
 }, {
 "frames": [{
@@ -45,7 +21,31 @@ animations = [{
 "texture": ExtResource("5_7woos")
 }],
 "loop": true,
-"name": &"ПИВО 2",
+"name": &"-2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_a12lq")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_jfno0")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_p7c0k")
+}],
+"loop": true,
+"name": &"2",
 "speed": 5.0
 }]
 
@@ -55,4 +55,4 @@ animations = [{
 position = Vector2(960, 539.99994)
 scale = Vector2(3.9999998, 3.7499998)
 sprite_frames = SubResource("SpriteFrames_skbsj")
-animation = &"ДЕФ"
+animation = &"0"
