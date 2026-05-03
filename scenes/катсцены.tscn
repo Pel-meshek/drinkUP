@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cbjphkh2kht1s"]
 
-[ext_resource type="Script" uid="uid://cuh8xfo6xbqnt" path="res://scenes/катсцены.gd" id="1_7htrt"]
+[ext_resource type="Script" uid="uid://cuh8xfo6xbqnt" path="res://scripts/катсцены.gd" id="1_7htrt"]
 [ext_resource type="Texture2D" uid="uid://dgmf4vjgkvrhv" path="res://assets/Катсцены/СКУФ ДЕФ.png" id="1_a12lq"]
 [ext_resource type="Texture2D" uid="uid://borfd76jmnytx" path="res://assets/Катсцены/УЖЕ НЕ СКУФ КОФЕ 1.png" id="2_7htrt"]
 [ext_resource type="Texture2D" uid="uid://cyh22snhby12e" path="res://assets/Катсцены/УЖЕ НЕ СКУФ КОФЕ2.png" id="3_p7c0k"]

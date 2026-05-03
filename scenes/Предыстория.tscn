@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://drxihf710hux2"]
+
+[ext_resource type="Script" uid="uid://1kcq53ttw04x" path="res://scripts/предыстория.gd" id="1_3b1ei"]
+[ext_resource type="Texture2D" uid="uid://6fvydkynjsaf" path="res://assets/Меню.png" id="1_ktjhe"]
+[ext_resource type="FontFile" uid="uid://mca6jyx15p1q" path="res://assets/Font/RobotoSlab-Regular.ttf" id="2_3ymkj"]
+
+[node name="Node2D" type="Node2D" unique_id=2082499353]
+script = ExtResource("1_3b1ei")
+
+[node name="Меню" type="Sprite2D" parent="." unique_id=1855458169]
+position = Vector2(960, 540)
+scale = Vector2(4, 3.7499998)
+texture = ExtResource("1_ktjhe")
+
+[node name="enter" type="Button" parent="." unique_id=1347559927]
+offset_left = 835.0
+offset_top = 927.0
+offset_right = 1276.0
+offset_bottom = 1015.0
+scale = Vector2(0.9999953, 1)
+theme_override_font_sizes/font_size = 60
+text = "БУХАТЬ"
+
+[node name="Label" type="Label" parent="." unique_id=1743520517]
+offset_left = 319.0
+offset_top = 66.0
+offset_right = 1789.0
+offset_bottom = 663.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_3ymkj")
+theme_override_font_sizes/font_size = 35
+text = "Ты - пивовар. Каждый день вечером к тебе приходит белочка. 
+Ты решил избавиться от алкогольной зависимости, но она заставляет тебя пить. 
+Твоя задача - перестать пахнуть перегаром.
+Как готовить пиво:
+1.	Возьми один из видов солода
+2.	Нарежь его
+3.	Засунь его в чан
+4.	Возьми один из видов хмеля и закинь в чан
+5.	Начни готовку
+6.	Готовое месево засунь в чан для брождения
+7.	Дождись брождения и отдай заказ
+Индикатор пивности показывает на какой стадии сейчас ты находишься.
+Справа сверху рецепты пива, сдавать их надо подойдя к двери и нажав E.
+Суть игры - метаморфоза из алкоголика в нормального человека"
+
+[connection signal="pressed" from="enter" to="." method="_on_enter_pressed"]

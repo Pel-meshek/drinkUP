@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://7n8dmxmairre"]
 
+[ext_resource type="Texture2D" uid="uid://6fvydkynjsaf" path="res://assets/Меню.png" id="1_yqeox"]
+
 [sub_resource type="GDScript" id="GDScript_vsb4k"]
 script/source = "extends Button
 
@@ -15,7 +17,7 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://scenes/garage.tscn\")
+	get_tree().change_scene_to_file(\"res://scenes/Предыстория.tscn\")
 "
 
 [sub_resource type="GDScript" id="GDScript_lti8b"]
@@ -38,28 +40,25 @@ func _on_pressed() -> void:
 
 [node name="menu" type="Node2D" unique_id=439909804]
 
-[node name="Label" type="Label" parent="." unique_id=393824467]
-offset_left = 843.0
-offset_top = 265.0
-offset_right = 1251.0
-offset_bottom = 348.0
-theme_override_font_sizes/font_size = 60
-text = "БУХАЙ"
+[node name="Меню" type="Sprite2D" parent="." unique_id=136196651]
+position = Vector2(959.99994, 540)
+scale = Vector2(3.9999998, 3.7499998)
+texture = ExtResource("1_yqeox")
 
 [node name="enter" type="Button" parent="." unique_id=415783847]
-offset_left = 759.0
-offset_top = 443.0
-offset_right = 1121.0
-offset_bottom = 534.0
+offset_left = 1353.0
+offset_top = 844.0
+offset_right = 1794.0
+offset_bottom = 984.0
 theme_override_font_sizes/font_size = 60
 text = "БУХАТЬ"
 script = SubResource("GDScript_vsb4k")
 
 [node name="quit" type="Button" parent="." unique_id=324879813]
-offset_left = 759.0
-offset_top = 586.0
-offset_right = 1121.0
-offset_bottom = 677.0
+offset_left = 279.0
+offset_top = 856.0
+offset_right = 699.0
+offset_bottom = 994.0
 theme_override_font_sizes/font_size = 60
 text = "НЕ НЕ ХОЧУ"
 script = SubResource("GDScript_lti8b")

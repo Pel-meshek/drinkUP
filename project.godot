@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="drinkUP"
-run/main_scene="uid://dq5cv7wxtn2le"
+run/main_scene="uid://7n8dmxmairre"
 config/features=PackedStringArray("4.6", "Mobile")
 
 [autoload]
