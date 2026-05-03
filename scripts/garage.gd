@@ -19,6 +19,8 @@ func _process(delta: float) -> void:
 		timestop()
 
 func timestop():
+	var ui = get_node("/root/Ui")
+	ui.start_cutscene()
 	$belka.visible = true
 	$light.visible = true
 	$Player.global_position = Vector2(416, 142)
@@ -29,4 +31,6 @@ func timestop():
 	$Camera2D/recepts.visible = false
 	$Camera2D/UI.visible = false
 	$Camera2D/Dialogue.visible = true
+	$Camera2D/UI.cutscene = true
+	$Camera2D/UI.update_time_display()
 	Global.day_increased = false

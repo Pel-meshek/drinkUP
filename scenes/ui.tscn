@@ -60,6 +60,13 @@ scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_7dvkv")
 animation = &"4"
 
+[node name="Label2" type="Label" parent="." unique_id=1388996794]
+offset_left = 71.0
+offset_top = 19.0
+offset_right = 126.0
+offset_bottom = 41.0
+text = "День: 1"
+
 [node name="Label" type="Label" parent="." unique_id=743651145]
 offset_left = 7.0
 offset_top = 937.0
@@ -67,10 +74,13 @@ offset_right = 331.0
 offset_bottom = 1064.0
 theme_override_fonts/font = ExtResource("7_p7vwb")
 theme_override_font_sizes/font_size = 60
+text = "1:00"
 
 [node name="TimerLabel" type="Label" parent="." unique_id=868182187]
-offset_right = 48.0
-offset_bottom = 26.0
+offset_left = 69.0
+offset_top = 36.0
+offset_right = 130.0
+offset_bottom = 89.0
 theme_override_font_sizes/font_size = 40
 text = "120"
 
