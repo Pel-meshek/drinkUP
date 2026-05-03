@@ -3,14 +3,17 @@ extends Control
 @onready var toggle_btn = $Button
 @onready var orders_panel = $PanelContainer
 @onready var orders_list = $PanelContainer/ScrollContainer/VBoxContainer
+var day_increased: bool = false
 
-# --- СПИСОК ЗАКАЗОВ (Редактируйте здесь) ---
-# Формат: [Название предмета, Требуемое количество, Выполнено?]
 var orders_data: Array = [
-	["Светлый Лагер", false],
+	["Светлый Лагер", true],
 	["Летний блонд", false],
 ]
 
+func _process(delta: float) -> void:
+	if not day_increased and orders_data[0][1] and orders_data[1][1]:
+		Global.day += 1
+		day_increased = true 
 func _ready():
 	# Подключаем кнопку открытия/закрытия
 	toggle_btn.pressed.connect(_on_toggle_pressed)

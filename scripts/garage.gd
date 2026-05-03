@@ -10,3 +10,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("escape"):
 		get_tree().quit()
+	if Global.day == 1:
+		$belka.visible = true
+		$light.visible = true
+		$Camera2D/Dialogue.visible = true

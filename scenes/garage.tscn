@@ -47,7 +47,7 @@
 [ext_resource type="Texture2D" uid="uid://dlxuwo1q1ywir" path="res://assets/Скиллчек/Скиллчек9.png" id="36_ayv3f"]
 [ext_resource type="Texture2D" uid="uid://3wpfkxlis8ty" path="res://assets/Дверь/Анимация двери4.png" id="37_ahcgg"]
 [ext_resource type="Texture2D" uid="uid://bhx1opqe66nhf" path="res://assets/Скиллчек/Скиллчек10.png" id="37_j55nb"]
-[ext_resource type="Script" uid="uid://cr28fps778guc" path="res://scripts/solods.gd" id="38_0juyn"]
+[ext_resource type="Script" path="res://scripts/solods.gd" id="38_0juyn"]
 [ext_resource type="Texture2D" uid="uid://tx16hsriplij" path="res://assets/Дверь/Анимация двери5.png" id="38_l6jx5"]
 [ext_resource type="Texture2D" uid="uid://bx1bdcehbnakr" path="res://assets/Скиллчек/Скиллчек11.png" id="38_mpx25"]
 [ext_resource type="Texture2D" uid="uid://ctq6e3lhiun7" path="res://assets/Дверь/Анимация двери6.png" id="39_3fq53"]
@@ -1051,6 +1051,7 @@ tile_map_data = PackedByteArray("AAAEAAIADQAAAAAAAAAEAAMADQAAAAEAAAAFAAIADQABAAA
 tile_set = SubResource("TileSet_4y4st")
 
 [node name="light" type="Node2D" parent="." unique_id=1879950641]
+visible = false
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="light" unique_id=1113064694]
 energy = 0.3
@@ -1248,6 +1249,7 @@ stream = ExtResource("12_4laxj")
 volume_db = -31.21
 
 [node name="belka" parent="." unique_id=2000938191 instance=ExtResource("23_5080d")]
+visible = false
 position = Vector2(377, 143)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1873902374]

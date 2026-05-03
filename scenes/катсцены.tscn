@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cbjphkh2kht1s"]
+
+[ext_resource type="Texture2D" uid="uid://dgmf4vjgkvrhv" path="res://assets/Катсцены/СКУФ ДЕФ.png" id="1_a12lq"]
+[ext_resource type="Texture2D" uid="uid://borfd76jmnytx" path="res://assets/Катсцены/УЖЕ НЕ СКУФ КОФЕ 1.png" id="2_7htrt"]
+[ext_resource type="Texture2D" uid="uid://cyh22snhby12e" path="res://assets/Катсцены/УЖЕ НЕ СКУФ КОФЕ2.png" id="3_p7c0k"]
+[ext_resource type="Texture2D" uid="uid://d02uvrmhv02d3" path="res://assets/Катсцены/СКУФ 1ПИВО.png" id="4_jfno0"]
+[ext_resource type="Texture2D" uid="uid://dnup4uwrgduy1" path="res://assets/Катсцены/СКУФ 2ПИВО.png" id="5_7woos"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_skbsj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_a12lq")
+}],
+"loop": true,
+"name": &"ДЕФ",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7htrt")
+}],
+"loop": true,
+"name": &"КОФЕ 1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_p7c0k")
+}],
+"loop": true,
+"name": &"КОФЕ 2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_jfno0")
+}],
+"loop": true,
+"name": &"ПИВО 1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_7woos")
+}],
+"loop": true,
+"name": &"ПИВО 2",
+"speed": 5.0
+}]
+
+[node name="Катсцены" type="Node2D" unique_id=858658084]
+
+[node name="Катсцена" type="AnimatedSprite2D" parent="." unique_id=1599410933]
+position = Vector2(960, 539.99994)
+scale = Vector2(3.9999998, 3.7499998)
+sprite_frames = SubResource("SpriteFrames_skbsj")
+animation = &"ПИВО 2"

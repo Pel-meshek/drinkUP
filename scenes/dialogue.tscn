@@ -10,10 +10,10 @@ script = ExtResource("1_3n4vj")
 text_speed = 0.03
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=257934461]
-offset_left = 1331.4286
-offset_top = 720.0
-offset_right = 1904.2858
-offset_bottom = 960.0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 573.8572
+offset_bottom = 239.0
 texture = ExtResource("2_fyky8")
 region_rect = Rect2(0, 0, 64, 32)
 patch_margin_left = 4
