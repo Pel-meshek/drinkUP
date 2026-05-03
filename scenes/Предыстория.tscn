@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://1kcq53ttw04x" path="res://scripts/предыстория.gd" id="1_3b1ei"]
 [ext_resource type="Texture2D" uid="uid://6fvydkynjsaf" path="res://assets/Меню.png" id="1_ktjhe"]
 [ext_resource type="FontFile" uid="uid://mca6jyx15p1q" path="res://assets/Font/RobotoSlab-Regular.ttf" id="2_3ymkj"]
+[ext_resource type="AudioStream" uid="uid://dc456d25ts7we" path="res://Саунд/Superперцы.mp3" id="4_rsdow"]
 
 [node name="Node2D" type="Node2D" unique_id=2082499353]
 script = ExtResource("1_3b1ei")
@@ -43,5 +44,11 @@ text = "Ты - пивовар. Каждый день вечером к тебе 
 Индикатор пивности показывает на какой стадии сейчас ты находишься.
 Справа сверху рецепты пива, сдавать их надо подойдя к двери и нажав E.
 Суть игры - метаморфоза из алкоголика в нормального человека"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1842526256]
+stream = ExtResource("4_rsdow")
+volume_db = 4.365
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="enter" to="." method="_on_enter_pressed"]
