@@ -34,7 +34,7 @@ func end_cutscene():
 	print("Катсцена закончена, таймер запущен")
 
 func start_new_day():
-	time_left = 60 # Или 120, как вам нужно
+	time_left = 120 # Или 120, как вам нужно
 	cutscene = false
 	update_time_display()
 	if day_timer:
@@ -57,7 +57,8 @@ func _on_day_timer_timeout():
 func update_time_display():
 	if not is_instance_valid(time_label):
 		return
-		
+	$Label2.text = ""
+	$Label2.text = "День: " + str(Global.day)
 	if cutscene:
 		# При катсцене можно скрыть таймер или показать "--:--"
 		time_label.text = "--:--" 
@@ -77,7 +78,7 @@ func _process(delta: float):
 			-2: score_hud.play("5")
 
 
-	if Global.day == 1:
+	if Global.day == 7:
 		item_label.text = ""
 	# Оптимизация: используем match вместо кучи if
 	match Global.score:

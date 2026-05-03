@@ -91,6 +91,8 @@ func _input(event: InputEvent):
 					print(",ehvfklf")
 					choice_node.visible = true
 					Choice.choice() # Вызовите функцию выбора, если она есть
+					Global.day = 2
+					queue_free()
 
 			
 			if current_index < dialog_data.size():
